@@ -1,0 +1,17 @@
+#root::before {
+    content: '';
+    background-image: url('../images/film-bg.jpg');
+    position: fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -100;
+    opacity: 0.2;
+}
+
+body {
+    margin: 0;
+}

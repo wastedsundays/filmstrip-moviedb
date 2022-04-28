@@ -1,0 +1,17 @@
+.footer {
+    height: 50px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/film-bar.jpg');
+    background-position: center top;
+    padding-left: 0;
+    margin-top: 700px;
+
+    li {
+        list-style: none;
+        padding: 0 20px;
+
+    }
+}

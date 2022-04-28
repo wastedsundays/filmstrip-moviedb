@@ -1,0 +1,32 @@
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+img {
+    width: 264px;
+    height: 79px;
+}
+
+.nav-menu {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    padding-left: 0;
+    align-items: center;
+    background-image: url('../images/film-bar.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    li {
+        list-style: none;
+        padding: 0 20px;
+        width: 60px;
+        border: 1px solid black;
+        text-align: center;
+    }
+}
+
