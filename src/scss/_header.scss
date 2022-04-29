@@ -1,5 +1,9 @@
 .header-wrapper {
-    margin-bottom: 90px;
+    // margin-bottom: 90px;
+    img {
+        width: 264px;
+        height: 79px;
+    }
 }
 
 .header-nav {
@@ -10,10 +14,7 @@
     z-index: 100;
 }
 
-img {
-    width: 264px;
-    height: 79px;
-}
+
 
 .nav-menu {
     display: flex;
