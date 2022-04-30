@@ -20,8 +20,9 @@ function PageHome({sort}) {
           const data = await res.json();
           //console.log(data.results)
           const first12Movies = data.results.splice(0,12);
+          // const next12Movies = data.results.splice(13,24);
           //console.log(first12Movies);
-           console.log(first12Movies);
+          // console.log(first12Movies);
           setmoviesData(first12Movies);
         }
         

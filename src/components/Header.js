@@ -5,7 +5,22 @@ const Header = () => {
 
 
     return(
-        <header className='header-wrapper'>            
+        <header> 
+            {/* <div className='mobile-header-wrapper'>
+                <nav className='mobile-header-nav'>    
+                    <NavLink to="/"><img src={logo} className='logo' alt='FilmsTrip Logo' /></NavLink>                
+                    <ul className='mobile-nav-menu'>
+                        <li className='spacer'></li>
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/favourites">Favourites</NavLink></li>
+                        
+                        <li><NavLink to="/account">Account</NavLink></li>
+                        <li><NavLink to="/about">About</NavLink></li>
+                        <li className='dark-light-mode'></li>
+                    </ul>
+                </nav>
+            </div> */}
+            <div className='header-wrapper'>            
                 <nav className='header-nav'>                    
                     <ul className='nav-menu'>
                         <li className='spacer'></li>
@@ -17,6 +32,7 @@ const Header = () => {
                         <li className='dark-light-mode'></li>
                     </ul>
                 </nav>
+            </div>
         </header>
     )
 }
