@@ -15,7 +15,7 @@ function MovieCard({ movie }) {
           <div className="movie-info">
               <h3>{movie.title}</h3>
               <p>Synopsis Lorem Ipsum Ipsum Lorem</p>
-              <Link to="/">More Info</Link>
+              <Link to={`/movie/${movie.id}`}>More Info</Link>
           </div>
           <div className="movie-info-bg">
           </div>

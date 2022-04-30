@@ -1,0 +1,54 @@
+.single-movie-poster{
+    img{
+        margin-top: 100px;
+        width: 200px;
+    }
+}
+
+// .single-movie-backdrop{
+//     width: 600px;
+// }
+
+
+
+.single-movie-container {
+
+    position: relative;
+    border: 5px solid white;
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+
+    .single-movie-poster,
+    .single-movie-container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .single-movie-backdrop {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        opacity: .3;
+    }
+
+
+p {
+    line-height: 1.4;
+}
+
+@media (min-width: 600px){
+
+    display: flex;
+
+    .single-movie-poster{
+        flex: 0 0 200px;
+
+    }
+}
+}

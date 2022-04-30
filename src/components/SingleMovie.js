@@ -1,0 +1,50 @@
+// import placeholder from '../images/godzilla-vs-kong-demo-poster.jpg';
+import noPoster from '../images/no-movie-poster.jpg';
+
+function SingleMovie({movie}) {
+
+
+    // const movie = {
+    //     title: 'Godzilla vs. Kong',
+    //     overview: 'Lorem Ipsum',
+    //     poster_path: placeholder
+    // }
+
+    
+
+  return (
+    <>  
+    
+        <div className="single-movie-backdrop"
+            style={{
+                backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`
+            }}></div>
+            <div className='single-movie-poster'>
+            {movie.poster_path === null ?
+                <img src={noPoster} alt="No Poster Available" /> :
+                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+            }
+        
+        </div>
+        <div className="single-movie-info">
+            <h2>{movie.title}</h2>
+            <p>{movie.release_date}</p>
+            <p>{movie.overview}</p>
+            <p>{movie.tagline}</p>
+            <p>{movie.runtime}</p>
+            {/* <p>{movie.genres[0].name}</p> */}
+            <p>{movie.vote_average}</p>
+            {/* {console.log(movie.credits)} */}
+            {movie.credits.cast.slice(0, 6).map(castList => <p key={castList.id}>{castList.name}</p>)}
+            {/* <p>{movie.credits.cast[0].name}</p> */}
+            <p>{movie.release_dates.results[52].release_dates[0].certification}</p>
+            {console.log(movie.genres)}
+            {movie.genres.map(genreList => <p key={genreList.id}>{genreList.name}</p>)}
+
+        </div>
+    
+    </>
+  )
+}
+
+export default SingleMovie
