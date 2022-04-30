@@ -36,8 +36,6 @@ function SingleMovie({movie}) {
             </div>
             <p>{`Rating: ${movie.vote_average}`}</p>
             <p>{movie.overview}</p>
-            
-            
             {/* <p>{movie.genres[0].name}</p> */}
             {/* {console.log(movie.credits)} */}
             
