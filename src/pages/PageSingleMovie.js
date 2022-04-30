@@ -25,7 +25,7 @@ function PageSingleMovie() {
 
   return (
 
-    <section className="single-movie-container">
+    <section className="single-movie-container-page">
         {movieData !== false && <SingleMovie movie={movieData}/>}
     </section>
 
