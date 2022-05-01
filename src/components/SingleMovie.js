@@ -25,7 +25,7 @@ function SingleMovie({movie}) {
             <div className="single-movie-info">
                 <h2>{movie.title}</h2>
                 <p>{movie.tagline}</p>
-                <p>{movie.release_dates.results[52].release_dates[0].certification}</p>
+                {/* <p>{movie.release_dates.results[52].release_dates[0].certification}</p> */}
                 <p>{`${movie.runtime} mins`}</p>
                 <p>{movie.release_date}</p>
                 <div className="details-genres">
