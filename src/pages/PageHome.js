@@ -16,11 +16,11 @@ function PageHome({sort}) {
           // console.log(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
 
         const fetchMovies = async () => {
-          const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`);
+          const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=2`);
           const data = await res.json();
           //console.log(data.results)
           const first12Movies = data.results.splice(0,12);
-          // const next12Movies = data.results.splice(13,24);
+
           //console.log(first12Movies);
           // console.log(first12Movies);
           setmoviesData(first12Movies);
