@@ -12,6 +12,7 @@ const Header = () => {
                 <nav className='header-nav'>                    
                     <ul className='nav-menu'>                        
                         <NavLink to="/"><img src={logo} className='logo' alt='FilmsTrip Logo' /></NavLink>
+                        <Hamburger />
                         <li className='spacer'></li>
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/favourites">Favourites</NavLink></li>
@@ -19,7 +20,7 @@ const Header = () => {
                         <li><NavLink to="/about">About</NavLink></li>
                         <li className='dark-light-mode'></li>
                     </ul>
-                    <Hamburger />
+                    
                 </nav>
             </div>
             <SearchBar />

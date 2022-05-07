@@ -41,8 +41,8 @@ function SingleMovie({movie}) {
 
         
         <div className="cast-info">{movie.credits.cast.slice(0, 6).map(castList => 
-                <div className='cast-member'>
-                    <p key={castList.id}>{castList.name}</p><p>{castList.character}</p>
+                <div className='cast-member' key={castList.id}>
+                    <p >{castList.name}</p><p>{castList.character}</p>
                     {castList.profile_path === null ? 
                     <img src={noPoster} alt="No Poster Available" /> :
                     <img src={`https://image.tmdb.org/t/p/original/${castList.profile_path}`} alt={castList.name}/>}
