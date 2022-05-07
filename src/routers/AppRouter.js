@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome.js';
 import PageSingleMovie from '../pages/PageSingleMovie.js';
+import PageSearch from  '../pages/PageSearch.js';
+
 
 // import PageAbout from '../pages/PageAbout.js';
 // import PageAccount from '../pages/PageAccount.js';
@@ -31,6 +33,7 @@ function App() {
           {/* This is the link to a single movie page */}
           <Route path="/movie/:id" element={<PageSingleMovie />} />
 
+          <Route path="/search-results/" element={<PageSearch />} />
           {/* <Route path='/favourites' element={<PageFavourites />} />
           <Route path='/account' element={<PageAccount />} />
           <Route path='/about' element={<PageAbout />} /> */}
