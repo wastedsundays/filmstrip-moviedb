@@ -1,5 +1,7 @@
 .three-col {width: 50px;
-position: relative;}
+position: relative;
+top: - 185px;
+right: -280px;}
 
 .row .three{
     padding: 80px 30px;
@@ -12,7 +14,7 @@ position: relative;}
   }
   
   .hamburger .line{
-    width: 50px;
+    width: 35px;
     height: 5px;
     background-color: black;
     display: block;

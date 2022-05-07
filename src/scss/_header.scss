@@ -26,23 +26,23 @@
 
 .nav-menu {
     // height: 64px;
-//     display: flex;
+    // display: flex;
 //     margin: 0 auto;
 //     justify-content: space-evenly;
     padding-left: 1px;
-//     align-items: center;
+    // align-items: center;
     background-image: url('../images/film-bar.jpg');
     background-position: top left;
     background-repeat: no-repeat;
     // background-size: cover;
 
     li {
-        // padding-left: 0;
-//         list-style: none;
-//         padding: 0 20px;
-//         width: 60px;
-//         border: 1px solid black;
-//         text-align: center;
+        padding-left: 0;
+        list-style: none;
+        padding: 0 20px;
+        width: 60px;
+        border: 1px solid black;
+        text-align: center;
     }
 }
 

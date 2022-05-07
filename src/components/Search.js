@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
@@ -27,7 +28,8 @@ return(
             placeholder="Search blog posts"
             name="r" 
         />
-        <button type="submit">Search</button>
+        {/* <button type="submit">Search</button> */}
+        <Link to={`/search-results/`} type='submt'>Search</Link>
     </form>
 );
 }

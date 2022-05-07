@@ -28,7 +28,7 @@ function PageHome({sort}) {
 
         return (
         <section className='home-page'>
-          {/* <NavSort /> */}
+          <NavSort />
 
           {moviesData !== false && <Movies moviesData={moviesData} />}
 
