@@ -1,11 +1,11 @@
 .three-col {
     width: 50px;
     // position: relative;
-    top: - 185px;
-    right: -280px;
+    // top: - 185px;
+    // right: -280px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1000px){
   .three-col {
     display: none;
   }

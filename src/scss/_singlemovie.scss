@@ -1,6 +1,7 @@
 .single-movie-poster{
     img{
-        width: 328px;
+        width: 100%;
+        max-width: 329px;
     }
 }
 
@@ -10,7 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // width: 1200px;
+    max-width: 1181px;
     margin: 0 auto;
     img{
         width: 100%;
@@ -19,7 +20,9 @@
 }
 
 .cast-member {
-    width: 200px;
+    // width: 200px;
+    max-width: 151px;
+    min-width: 113px;
     border: 1px solid white;
 
 }
@@ -72,6 +75,7 @@ p {
     min-width: 257px;
     max-width: 1179px;
     border: 5px solid white;
+    margin: 0 auto;
 }
 
 .single-movie-backdrop {
