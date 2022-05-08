@@ -1,8 +1,21 @@
-h3 {
-    text-align: center;
+.movie-card {
+    font-size: 80%;
+    h2, h3 {
+        text-align: center;
+        margin: 0;
+        font-weight: 200;
+
+    }
+    p {
+        padding: 0 10px;
+
+        display: -webkit-box;
+-webkit-line-clamp: 9;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+    }
 }
-
-
 
 .movie-info-bg{
     position: absolute;
@@ -10,7 +23,7 @@ h3 {
     left: 10px;
     opacity: 0;
     background-color: black;
-    height: 387px;
+    height: 336px;
     width: 216px;
     transition: all .5s ease;
 }
@@ -31,9 +44,10 @@ h3 {
 
 .movie-poster {
     position: relative;
+    width: 236px;
     img{
         width: 236px;
-        height: 407px;
+        height: 356px;
         padding: 10px;
         background-color: rgba(255,255,255,.75);
         object-fit: cover;
@@ -56,7 +70,30 @@ h3 {
 
 
 .more-info-button{
-    background-color: orange;
-   padding: 10px 40px;
-   text-align: center;
+    border: 1px solid white;
+    padding: 10px 30px;
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+
+.more-info-button:hover {
+    background-color: rgba(255,255,255,.95);
+    color: black;
+}
+
+
+// for testing - turn off when you're done styling the home page
+.movie-info-bg {
+    opacity: 1;
+}
+
+.movie-info {
+    opacity: 1;
+    z-index:100;
 }
