@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
+import { format } from 'date-fns';
 
 function MovieCard({ movie }) {
+
+  const date = new Date(movie.release_date);
+  // const formattedDate = format(date, "MMMM d, yyyy");
+  const formattedYear = format(date, "yyyy");
+  const titleTrunc = (movie.title).substring(0,45);
 
 
   return (
@@ -13,8 +19,10 @@ function MovieCard({ movie }) {
             }
            <div className='info-hover'> 
           <div className="movie-info">
-              <h3>{movie.title}</h3>
-              <p>Synopsis Lorem Ipsum Ipsum Lorem</p>
+              <h2>{titleTrunc}</h2>
+              <h3>({formattedYear})</h3>
+              <p>{movie.overview}</p>
+              {/* <p>{descriptionTrunc}</p> */}
               <Link to={`/movie/${movie.id}`} className="more-info-button">More Info</Link>
           </div>
           <div className="movie-info-bg">
