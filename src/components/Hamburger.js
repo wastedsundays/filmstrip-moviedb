@@ -10,20 +10,20 @@ const Hamburger = () => {
 
     return(
 
-      //   <div onClick={ToggleClass} className="three-col">
-      //   <div className={isActive ? "hamburger" : "hamburger is-active"} id="hamburger-1">
-      //     <span className="line"></span>
-      //     <span className="line"></span>
-      //     <span className="line"></span>
+        <div onClick={ToggleClass} className="three-col">
+        <div className={isActive ? "hamburger" : "hamburger is-active"} id="hamburger-1">
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+        </div>
+      </div>
+      // <div onClick={ToggleClass} id="nav-container">
+      //   <div className={isActive ? "toggle-icon" : "pushed toggle-icon"}>
+      //     <span className="bar"></span>
+      //     <span className="bar"></span>
+      //     <span className="bar"></span>
       //   </div>
       // </div>
-      <div onClick={ToggleClass} id="nav-container">
-  <div className={isActive ? "toggle-icon" : "pushed toggle-icon"}>
-    <span className="bar"></span>
-    <span className="bar"></span>
-    <span className="bar"></span>
-  </div>
-</div>
 
     )
 

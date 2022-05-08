@@ -8,9 +8,9 @@ import PageSingleMovie from '../pages/PageSingleMovie.js';
 import PageSearch from  '../pages/PageSearch.js';
 
 
-// import PageAbout from '../pages/PageAbout.js';
-// import PageAccount from '../pages/PageAccount.js';
-// import PageFavourites from '../pages/PageFavourites.js';
+import PageAbout from '../pages/PageAbout.js';
+import PageAccount from '../pages/PageAccount.js';
+import PageFavourites from '../pages/PageFavourites.js';
 
 
 // import Page404 from '../pages/Page404.js';
@@ -33,10 +33,11 @@ function App() {
           {/* This is the link to a single movie page */}
           <Route path="/movie/:id" element={<PageSingleMovie />} />
 
+          {/* Links to the other pages */}
           <Route path="/search-results/" element={<PageSearch />} />
-          {/* <Route path='/favourites' element={<PageFavourites />} />
+          <Route path='/favourites' element={<PageFavourites />} />
           <Route path='/account' element={<PageAccount />} />
-          <Route path='/about' element={<PageAbout />} /> */}
+          <Route path='/about' element={<PageAbout />} />
           {/* <Route path='/single' element={<PageSingleMovie />} /> */}
           {/* <Route path='*' element={<Page404 />} />  */}
         </Routes> 

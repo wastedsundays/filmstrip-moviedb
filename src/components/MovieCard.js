@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
 import { format } from 'date-fns';
+// import FavButton from './FavButton';
+
+
+
 
 function MovieCard({ movie }) {
+
+
 
   const date = new Date(movie.release_date);
   // const formattedDate = format(date, "MMMM d, yyyy");
@@ -24,6 +30,7 @@ function MovieCard({ movie }) {
               <p>{movie.overview}</p>
               {/* <p>{descriptionTrunc}</p> */}
               <Link to={`/movie/${movie.id}`} className="more-info-button">More Info</Link>
+              {/* <FavButton /> */}
           </div>
           <div className="movie-info-bg">
           </div>
