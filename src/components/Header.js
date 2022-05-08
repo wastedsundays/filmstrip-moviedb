@@ -8,11 +8,11 @@ const Header = () => {
 
     return(
         <header> 
-            <div className='header-wrapper'>            
-                <nav className='header-nav'>                    
-                    <ul className='nav-menu'>                        
-                        <NavLink to="/"><img src={logo} className='logo' alt='FilmsTrip Logo' /></NavLink>
-                        <Hamburger />
+            <div className='header-wrapper'>  
+                <NavLink to="/"><img src={logo} className='logo' alt='FilmsTrip Logo' /></NavLink>          
+                <nav className='header-nav'> 
+                    <Hamburger />                   
+                    <ul className='nav-menu'>                             
                         <li className='spacer'></li>
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/favourites">Favourites</NavLink></li>

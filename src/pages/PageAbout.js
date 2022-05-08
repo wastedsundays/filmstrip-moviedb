@@ -3,7 +3,7 @@ const PageAbout = () => {
         <section className='about-page'>
             <div className='section-title'>
                 <h1>About</h1>
-                <hr/>
+            
             </div>
         </section>
     )
