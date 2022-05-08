@@ -5,6 +5,12 @@
     right: -280px;
 }
 
+@media (min-width: 768px){
+  .three-col {
+    display: none;
+  }
+}
+
 .row .three{
     padding: 80px 30px;
     -webkit-box-sizing: border-box;

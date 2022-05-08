@@ -15,7 +15,11 @@
 // }
 
 .header-wrapper {
-    
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../images/film-bar.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
     img {
         // width: 125px;
         height: 79px;
@@ -29,11 +33,11 @@
     // display: flex;
 //     margin: 0 auto;
 //     justify-content: space-evenly;
-    padding-left: 1px;
-    // align-items: center;
-    background-image: url('../images/film-bar.jpg');
-    background-position: top left;
-    background-repeat: no-repeat;
+    // padding-left: 1px;
+    // // align-items: center;
+    // background-image: url('../images/film-bar.jpg');
+    // background-position: top left;
+    // background-repeat: no-repeat;
     // background-size: cover;
 
     li {

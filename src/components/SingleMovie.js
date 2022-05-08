@@ -7,6 +7,7 @@ function SingleMovie({movie}) {
 
   return (
     <>  
+
         <div className="single-movie-container">
             <div className="single-movie-backdrop"
                 style={{
@@ -14,6 +15,7 @@ function SingleMovie({movie}) {
                 }}>
 
             </div>
+           
             <div className='single-movie-poster'>
                 {movie.poster_path === null ?
                     <img src={noPoster} alt="No Poster Available" /> :
