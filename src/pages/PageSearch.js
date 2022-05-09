@@ -1,9 +1,7 @@
-// import SectionTitle from '../components/SectionTitle';
-// import MovieScrollerSection from '../components/MovieScrollerSection';
 import { useEffect, useState } from 'react';
 import Movies from '../components/Movies';
-// import { API_KEY } from '../globals/globals';
-import  searchQuery  from '../components/Search';
+import { API_KEY } from '../globals/globals';
+// import  searchQuery  from '../components/Search';
 
 function PageSearch() {
 
@@ -18,9 +16,9 @@ function PageSearch() {
           // console.log(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
 
         const fetchMovies = async () => {
-          const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=e2be774394fd67e79142c1318cddcc84&language=en-US&query=moulin%20rouge&page=1&include_adult=false`);
+          const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=shrek&page=1&include_adult=false`);
           const data = await res.json();
-          const first20Movies = data.results.splice(0,20);
+          const first20Movies = data.results.splice(0,6);
           setmoviesData(first20Movies);
         }
         

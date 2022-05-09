@@ -29,7 +29,7 @@ return(
             name="r" 
         />
         {/* <button type="submit">Search</button> */}
-        <Link to={`/search-results/${searchQuery}`} type='submt'>Search</Link>
+        <Link to={`/search-results/`} type='submt'>Search</Link>
     </form>
 );
 }

@@ -12,6 +12,7 @@ function MovieCard({ movie }) {
 
   const date = new Date(movie.release_date);
   // const formattedDate = format(date, "MMMM d, yyyy");
+  console.log(movie.release_date);
   const formattedYear = format(date, "yyyy");
   const titleTrunc = (movie.title).substring(0,45);
 
