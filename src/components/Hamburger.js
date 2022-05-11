@@ -17,13 +17,7 @@ const Hamburger = () => {
           <span className="line"></span>
         </div>
       </div>
-      // <div onClick={ToggleClass} id="nav-container">
-      //   <div className={isActive ? "toggle-icon" : "pushed toggle-icon"}>
-      //     <span className="bar"></span>
-      //     <span className="bar"></span>
-      //     <span className="bar"></span>
-      //   </div>
-      // </div>
+
 
     )
 

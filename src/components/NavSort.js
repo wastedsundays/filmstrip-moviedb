@@ -17,7 +17,11 @@ function NavSort() {
                 <NavLink to="/sort/upcoming">Upcoming</NavLink>
             </li>
         </ul>
+
     </nav>
+    
+
+    
   )
 }
 
