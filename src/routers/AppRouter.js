@@ -6,13 +6,9 @@ import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome.js';
 import PageSingleMovie from '../pages/PageSingleMovie.js';
 import PageSearch from  '../pages/PageSearch.js';
-
-
 import PageAbout from '../pages/PageAbout.js';
 import PageAccount from '../pages/PageAccount.js';
 import PageFavourites from '../pages/PageFavourites.js';
-
-
 // import Page404 from '../pages/Page404.js';
 
 function App() {

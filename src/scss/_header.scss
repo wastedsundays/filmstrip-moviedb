@@ -1,10 +1,10 @@
-// .header-wrapper {
-    // margin-bottom: 90px;
-//     img {
-//         width: 264px;
-//         height: 79px;
-//     }
-// }
+.header-wrapper {
+    margin-bottom: 90px;
+    img {
+        width: 264px;
+        height: 79px;
+    }
+}
 
 // .header-nav {
 //     position: fixed;
@@ -14,21 +14,21 @@
 //     z-index: 100;
 // }
 
-.header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    background-image: url('../images/film-bar.jpg');
-    background-position: top left;
-    background-repeat: no-repeat;
-    img {
-        // width: 125px;
-        height: 79px;
-    }
-}
+// .header-wrapper {
+//     display: flex;
+//     justify-content: space-between;
+//     background-image: url('../images/film-bar.jpg');
+//     background-position: top left;
+//     background-repeat: no-repeat;
+//     img {
+//         // width: 125px;
+//         height: 79px;
+//     }
+// }
 
 
 
-.nav-menu {
+// .nav-menu {
     // height: 64px;
     // display: flex;
 //     margin: 0 auto;
@@ -40,13 +40,13 @@
     // background-repeat: no-repeat;
     // background-size: cover;
 
-    li {
-        padding-left: 0;
-        list-style: none;
-        padding: 0 20px;
-        width: 60px;
-        border: 1px solid black;
-        text-align: center;
-    }
-}
+//     li {
+//         padding-left: 0;
+//         list-style: none;
+//         padding: 0 20px;
+//         width: 60px;
+//         border: 1px solid black;
+//         text-align: center;
+//     }
+// }
 
