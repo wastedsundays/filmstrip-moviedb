@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-const Hamburger = () => {
+const Hamburger2 = () => {
 
 
     const [isActive, setActive] = useState("false");
@@ -24,4 +24,4 @@ const Hamburger = () => {
 
 }
 
-export default Hamburger;
+export default Hamburger2;
