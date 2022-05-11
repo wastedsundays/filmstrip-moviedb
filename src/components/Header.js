@@ -30,13 +30,14 @@ const Header = () => {
     return(
         <header> 
             <div className='header-wrapper'>  
-                <NavLink to="/"><img src={logo} className='logo' alt='FilmsTrip Logo' /></NavLink>          
+                <NavLink to="/"><img src={logo} className='logo-mobile' alt='FilmsTrip Logo' /></NavLink>          
                 <nav className='header-nav'> 
                     {(toggleMenu || screenWidth > 500) && (
                         <ul className='nav-menu'>                             
                             <li className='spacer'></li>
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/favourites">Favourites</NavLink></li>
+                            <NavLink to="/"><img src={logo} className='logo-desktop' alt='FilmsTrip Logo' /></NavLink>
                             <li><NavLink to="/account">Account</NavLink></li>
                             <li><NavLink to="/about">About</NavLink></li>
                             <li className='dark-light-mode'></li>
