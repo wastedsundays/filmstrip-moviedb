@@ -1,10 +1,72 @@
 .header-wrapper {
-    margin-bottom: 90px;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+        background-image: url('../images/film-bar.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
     img {
-        width: 264px;
         height: 79px;
     }
+    .hamburger-icon {
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+    .logo-desktop {
+        display: none;
+    }
+
+    .nav-menu {
+        padding: 0;
+        margin: 0;
+        transition: margin 1100ms;
+
+        li {
+            width: 150px;
+            list-style: none;
+            text-align: center;
+        }
+
+
+    }
+
 }
+
+@media (min-width: 800px) {
+.header-wrapper {
+    .hamburger-icon {
+        display: none;
+    }
+    .logo-mobile {
+        display: none;
+    }
+
+    .logo-desktop {
+        display: inline-block;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+}
+}
+
+// .header-wrapper {
+//     margin-bottom: 90px;
+//     img {
+//         width: 264px;
+//         height: 79px;
+//     }
+// }
 
 // .header-nav {
 //     position: fixed;
@@ -50,83 +112,83 @@
 //     }
 // }
 
-.header-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
+// .header-nav {
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
 
 
     
-}
+// }
 
-.nav-menu {
-    list-style-type: none;
-    background-color: white;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 0;
-    margin: 0;
+// .nav-menu {
+//     list-style-type: none;
+//     background-color: white;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: relative;
+//     padding: 0;
+//     margin: 0;
 
-    li {
-            margin-right: 20px;
-            font-size: 20px;
-            text-transform: uppercase;
-            color: #f1f1f1;
-            cursor: pointer;
-    }
-}
+//     li {
+//             margin-right: 20px;
+//             font-size: 20px;
+//             text-transform: uppercase;
+//             color: #f1f1f1;
+//             cursor: pointer;
+//     }
+// }
 
-.logo-mobile {
-    display: block;
-}
-.logo-desktop {
-    display: none;
-}
+// .logo-mobile {
+//     display: block;
+// }
+// .logo-desktop {
+//     display: none;
+// }
 
 
-@media (min-width: 500px) {
-    .hamburger-icon {
-        display: none;
-    }
+// @media (min-width: 800px) {
+//     .hamburger-icon {
+//         display: none;
+//     }
 
-    .logo-mobile {
-        display: none;
-    }
-    .logo-desktop {
-        display: block;
-    }
-}
+//     .logo-mobile {
+//         display: none;
+//     }
+//     .logo-desktop {
+//         display: block;
+//     }
+// }
 
-@media screen and (max-width: 500px){
-    .nav-menu {
-        flex-direction: column;
-        height: auto;
-        margin-top: 80px;
-    }
-    li:nth-child(1){
-        border-top: 1px solid rgba(255, 255, 255, 0.555);
-        margin-top: 50px;
-    }
-    li {
-        width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.555);
-        text-align: center;
-        margin-right: 0px;
-        padding: 20px 0;
-    }
-    .btn {
-        display: block;
-    }
+// @media screen and (max-width: 500px){
+//     .nav-menu {
+//         flex-direction: column;
+//         height: auto;
+//         margin-top: 80px;
+//     }
+//     li:nth-child(1){
+//         border-top: 1px solid rgba(255, 255, 255, 0.555);
+//         margin-top: 50px;
+//     }
+//     li {
+//         width: 100%;
+//         border-top: 1px solid rgba(255, 255, 255, 0.555);
+//         text-align: center;
+//         margin-right: 0px;
+//         padding: 20px 0;
+//     }
+//     .btn {
+//         display: block;
+//     }
     
 
-    .hamburger-icon {
-        position: absolute;
-        right: 0;
-        top: 10px;
+//     .hamburger-icon {
+//         position: absolute;
+//         right: 0;
+//         top: 10px;
 
-    }
+//     }
 
-}
+// }

@@ -32,7 +32,7 @@ const Header = () => {
             <div className='header-wrapper'>  
                 <NavLink to="/"><img src={logo} className='logo-mobile' alt='FilmsTrip Logo' /></NavLink>          
                 <nav className='header-nav'> 
-                    {(toggleMenu || screenWidth > 500) && (
+                    {(toggleMenu || screenWidth > 799) && (
                         <ul className='nav-menu'>                             
                             <li className='spacer'></li>
                             <li><NavLink to="/">Home</NavLink></li>
