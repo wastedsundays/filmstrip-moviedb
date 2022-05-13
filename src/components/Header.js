@@ -10,9 +10,20 @@ const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
     const [isOpen, setOpen] = useState(false)
+    const [checked, setChecked] = useState(false);
+
 
     const toggleNav = () => {
         setToggleMenu(!toggleMenu)
+        // console.log(toggleMenu);
+        // if(toggleMenu === true){
+        if(toggleMenu === true) {
+            setToggleMenu(false);
+        } else {
+            setToggleMenu(true);
+        }
+
+        // }
      
       }
 
@@ -46,6 +57,16 @@ const Header = () => {
                         </ul>
                     )}
                     <div className="hamburger-icon" onClick={toggleNav}><Hamburger /></div>  
+
+                    {/* <button onClick={() => setChecked((c) => !c)}>toggle</button> */}
+{/* 
+                    <input onClick={toggleNav} type="checkbox" id="hi"/>
+                    <label className="menu" htmlFor="hi">
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    </label> */}
+                    
                     {/* <button onClick={toggleNav} className="btn">BTN</button> */}
                 </nav>
             </div>
