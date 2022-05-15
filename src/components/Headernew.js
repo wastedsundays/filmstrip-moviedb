@@ -18,7 +18,7 @@ const Header = () => {
     }
     
     useEffect(() => {
-          let mediaQuery = window.matchMedia('(min-width: 600px)');
+          let mediaQuery = window.matchMedia('(min-width: 800px)');
           mediaQuery.addEventListener('change', isDesktop);
           // this is the cleanup function to remove the listener
           return () => mediaQuery.removeEventListener('change', isDesktop);
@@ -40,7 +40,7 @@ const Header = () => {
                     <span className="line"></span>
                     <span className="line"></span>
                 </span>
-                <span className="sr-only">Menu</span>
+                {/* <span className="sr-only">Menu</span> */}
             </button>
             <Nav handleShowHideNav={showHideNav} />
         </header>
