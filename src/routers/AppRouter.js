@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import '../scss/styles.scss';
 
 import Header from '../components/Header';
+import Headernew from '../components/Headernew';
 import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome.js';
 import PageSingleMovie from '../pages/PageSingleMovie.js';
@@ -16,7 +17,7 @@ function App() {
     return (
       <BrowserRouter>
         <div>
-        <Header />
+        <Headernew />
         <Routes>
           <Route path='/' element={<PageHome sort="popular"/>} />
 
