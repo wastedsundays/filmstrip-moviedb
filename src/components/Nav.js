@@ -12,19 +12,37 @@ const Nav = ({ handleShowHideNav }) => {
     }
 
     return (
-        <div className='header-wrapper'>
-            <NavLink to="/"><img src={logo} className="logo-mobile" alt='FilmsTrip Logo' /></NavLink>
-            <nav className="main-nav" onClick={closeNav}>
-                <ul className='nav-menu'>
-                    <li className='spacer'></li>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/favourites">Favourites</NavLink></li>
-                    <NavLink to="/"><img src={logo} className="logo-desktop" alt="FilmsTrip Logo" /></NavLink>
-                    <li><NavLink to="/account">Account</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li className='dark-light-mode'></li>
-                </ul>
-            </nav>
+        <div className="header-wrapper">
+            <div className='header-wrapper-mobile'>
+                <NavLink to="/"><img src={logo} className="logo-mobile" alt='FilmsTrip Logo' /></NavLink>
+                <nav className="main-nav" onClick={closeNav}>
+                    <ul className='nav-menu'>
+                        <li className='spacer'></li>
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/favourites">Favourites</NavLink></li>
+                        <li><NavLink to="/account">Account</NavLink></li>
+                        <li><NavLink to="/about">About</NavLink></li>
+                        <li className='dark-light-mode'></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div className='header-wrapper-desktop'>
+                {/* <nav className="main-nav-desktop" onClick={closeNav}> */}
+                <nav className="main-nav-desktop">
+                    <ul className='nav-menu-desktop'>
+                        <li className='spacer'></li>
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/favourites">Favourites</NavLink></li>
+                        <NavLink to="/"><img src={logo} className="logo-desktop" alt="FilmsTrip Logo" /></NavLink>
+                        <li><NavLink to="/account">Account</NavLink></li>
+                        <li><NavLink to="/about">About</NavLink></li>
+                        <li className='dark-light-mode'></li>
+                    </ul>
+                </nav>
+
+            </div>
 
         </div>
     );
