@@ -15,8 +15,8 @@ const Nav = ({ handleShowHideNav }) => {
         <div className="header-wrapper">
             <div className='header-wrapper-mobile'>
                 <NavLink to="/"><img src={logo} className="logo-mobile" alt='FilmsTrip Logo' /></NavLink>
-                <nav className="main-nav" onClick={closeNav}>
-                    <ul className='nav-menu'>
+                <nav className="main-nav-mobile" onClick={closeNav}>
+                    <ul className='nav-menu-mobile'>
                         <li className='spacer'></li>
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/favourites">Favourites</NavLink></li>
@@ -25,7 +25,6 @@ const Nav = ({ handleShowHideNav }) => {
                         <li className='dark-light-mode'></li>
                     </ul>
                 </nav>
-
             </div>
 
             <div className='header-wrapper-desktop'>
@@ -41,7 +40,6 @@ const Nav = ({ handleShowHideNav }) => {
                         <li className='dark-light-mode'></li>
                     </ul>
                 </nav>
-
             </div>
 
         </div>
