@@ -13,12 +13,18 @@ header {
   background-image: url('../images/film-bar.jpg');
   background-position: top left;
   background-repeat: no-repeat;
-  img {
+  .logo {
       height: 79px;
   }
 }
 
-.header-wrapper-mobile {
+.mode-switch-button img {
+  height: 30px;
+
+}
+
+
+// .header-wrapper-mobile {
     // margin: 0;
     // padding: 0;
     // z-index: 100;
@@ -39,38 +45,11 @@ header {
     // }
 
 
-}
+// }
 
 
 
-@media (min-width: 800px) {
 
-.nav-menu-desktop{
-  display: flex;
-}
-
-.header-wrapper-mobile {
-    // .hamburger-icon {
-    //     display: none;
-    // }
-    .logo-mobile {
-        display: none;
-    }
-
-
-
-    // .nav-menu {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     li{
-    //         width: 150px;
-    //     }
-
-
-    // }
-}
-}
 
 
 // .menu {

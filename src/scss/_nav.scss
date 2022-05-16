@@ -12,5 +12,50 @@
 
     @media (min-width: 800px) {
         display: inline-block;
+
+    }
+}
+
+.nav-menu-desktop {
+    @media (min-width: 800px) {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+      }
+
+      li {
+        width: 110px;
+        // border: 1px solid black;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 1rem;
+        padding: .5rem;
+        font-size: 120%;
+        position: relative;
+        top: -2px;
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+      }
+
+      .spacer {
+        width: 40px;
+        position: relative;
+        top: 2px;
+    }
+
+    svg:hover{
+        fill:red;
     }
 }
