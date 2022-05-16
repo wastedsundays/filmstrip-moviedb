@@ -1,69 +1,61 @@
-.main-nav {
+.header-wrapper-desktop{
+    display: none;
 
-    width: 100%;
-    position: absolute;
-    top: 79px;
-    // background-color: $dark;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    transition: height 0.5s ease, visibility 0s 0.5s;
+    @media (min-width: 800px) {
+    display: block;
+  }
 
-    .show & {
-        transition: height 0.5s ease, visibility 0s;
-        visibility: visible;
-        height: 254px;
+}
+
+.logo-desktop {
+    display: none;
+
+    @media (min-width: 800px) {
+        display: inline-block;
+
     }
+}
 
-    ul {
-        // @include flatten($is-list: true);
-    }
-    a {
-        // color: $light;
-        text-decoration: none;
-        display: block;
-        line-height: 50px;
-        font-size: 1.3em;
-        font-weight: bold;
-        padding: 0 ;
-        @at-root .main-nav li:not(:first-child) a {
-            border-top: 1px solid grey;
-        }
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: rgba(white, 0.2);
-        }
-    }
+.nav-menu-desktop {
+    @media (min-width: 800px) {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+      }
 
-    @media (min-width: em(600)){
-        height: auto;
-        visibility: visible;
-        transition: none;
-
-        .show & {
-            transition: none;
-            height: auto;
-        }
-        
-        ul {
-            display: flex;
-        }
-
-        li {
-            flex: 1;
-        }
+      li {
+        width: 110px;
+        // border: 1px solid black;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 1rem;
+        padding: .5rem;
+        font-size: 120%;
+        position: relative;
+        top: -2px;
 
         a {
-            padding: 0;
-            text-align: center;
-            border-top:  none;
-            @at-root .main-nav li:not(:first-child) a {
-                border-top: none;
-                border-left: 3px solid grey;
-            }
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
         }
 
+        a:hover {
+            color: red;
+        }
+
+      }
+
+      .spacer {
+        width: 40px;
+        position: relative;
+        top: 2px;
     }
 
+    svg:hover{
+        fill:red;
+    }
 }
