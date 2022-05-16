@@ -16,7 +16,7 @@ const Nav = ({ handleShowHideNav }) => {
     return (
         <div className="header-wrapper">
             <div className='header-wrapper-mobile'>
-                <NavLink to="/"><img src={logo} className="logo-mobile logo" alt='FilmsTrip Logo' /></NavLink>
+                <NavLink to="/"><img src={logo} onClick={closeNav} className="logo-mobile logo" alt='FilmsTrip Logo' /></NavLink>
                 <nav className="main-nav-mobile" onClick={closeNav}>
                     <ul className='nav-menu-mobile'>
                         <li className='spacer'></li>
