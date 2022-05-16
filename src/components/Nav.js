@@ -6,7 +6,7 @@ import ModeSwitch from './ModeSwitch';
 const Nav = ({ handleShowHideNav }) => {
     
     function closeNav(e){
-        if(window.innerWidth < 800){
+        if(window.innerWidth < 850){
             handleShowHideNav();
         }else{
             e.target.blur();
