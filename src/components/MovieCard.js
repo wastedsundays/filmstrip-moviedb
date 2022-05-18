@@ -25,18 +25,18 @@ function MovieCard({ movie }) {
                 <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
             }
            <div className='info-hover'> 
-          <div className="movie-info">
-              <h2>{titleTrunc}</h2>
-              <h3>({formattedYear})</h3>
-              <p>{movie.overview}</p>
-              {/* <p>{descriptionTrunc}</p> */}
-              <Link to={`/movie/${movie.id}`} className="more-info-button">More Info</Link>
-              {/* <FavButton /> */}
-          </div>
-          <div className="movie-info-bg">
-          </div>
+              <div className="movie-info">
+                <h2>{titleTrunc}</h2>
+                <h3>({formattedYear})</h3>
+                <p>{movie.overview}</p>
+                {/* <p>{descriptionTrunc}</p> */}
+                <Link to={`/movie/${movie.id}`} className="more-info-button">More Info</Link>
+                {/* <FavButton /> */}
+              </div>
+              <div className="movie-info-bg">
+              </div>
 
-          </div>
+            </div>
 
         </div>
 
