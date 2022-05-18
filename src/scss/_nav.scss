@@ -1,7 +1,7 @@
 .header-wrapper-desktop{
     display: none;
 
-    @media (min-width: 800px) {
+    @media (min-width: 850px) {
     display: block;
   }
 
@@ -10,14 +10,14 @@
 .logo-desktop {
     display: none;
 
-    @media (min-width: 800px) {
+    @media (min-width: 850px) {
         display: inline-block;
 
     }
 }
 
 .nav-menu-desktop {
-    @media (min-width: 800px) {
+    @media (min-width: 850px) {
         display: flex;
         margin: 0;
         padding: 0;
