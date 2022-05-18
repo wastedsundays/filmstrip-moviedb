@@ -49,7 +49,10 @@ function SingleMovie({movie}) {
         <div className="cast-card">{movie.credits.cast.slice(0, 6).map(castList => 
                 <div className='cast-poster' key={castList.id}>
                     <div className='cast-info'>
-                     <p >{castList.name}</p><p>{castList.character}</p>
+                     <p className='cast-name'>{castList.name}</p>
+                     <p className='cast-character'>{castList.character}</p>
+                     <div className="cast-info-bg">
+                        </div>
                      </div>
                     {castList.profile_path === null ? 
                     <img src={noPoster} alt="No Poster Available" /> :
@@ -58,7 +61,7 @@ function SingleMovie({movie}) {
 
                 )}
 
-                <div className='cast-hover'> 
+                {/* <div className='cast-hover'>  */}
                     {/* <div className="cast-info"> */}
                         {/* <p >{castList.name}</p><p>{castList.character}</p> */}
                         {/* <h2>{titleTrunc}</h2>
@@ -67,12 +70,11 @@ function SingleMovie({movie}) {
                         {/* <p>{descriptionTrunc}</p> */}
                         {/* <Link to={`/movie/${movie.id}`} className="more-info-button">More Info</Link> */}
                         {/* <FavButton /> */}
-                        <div className="cast-info-bg">
-                        </div>
+
                     {/* </div> */}
                   
 
-                </div>
+                {/* </div> */}
         </div>
 
 
