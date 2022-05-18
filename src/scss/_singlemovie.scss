@@ -117,7 +117,14 @@ p {
 
 
 
+.cast-poster {
+    width: 171px;
 
+    @media (min-width: 800px){
+        width: 178px;
+
+    }
+}
 
 
 .cast-poster:hover .cast-info-bg {
@@ -145,8 +152,8 @@ p {
     position: absolute;
     color: white;
     opacity: 0;
-    width: 113px;
-    padding: 2px 12px;
+    width: 148px;
+    padding: 2px 15px;
     // z-index:9;
 
     .cast-name {
