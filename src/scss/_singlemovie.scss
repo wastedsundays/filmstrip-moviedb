@@ -2,10 +2,15 @@
     position: relative;
     width: 90%;
     min-width: 288px;
-    max-width: 1179px;
+    max-width: 565px;
+    // max-width: 1179px;
     margin: 0 auto;
     padding: 10px;
     box-sizing: border-box;
+
+    @media (min-width: 800px){
+        max-width: 1179px;
+    }
 
 }
 
