@@ -2,10 +2,15 @@
     position: relative;
     width: 90%;
     min-width: 288px;
-    max-width: 1179px;
+    max-width: 565px;
+    // max-width: 1179px;
     margin: 0 auto;
     padding: 10px;
     box-sizing: border-box;
+
+    @media (min-width: 800px){
+        max-width: 1179px;
+    }
 
 }
 
@@ -117,7 +122,14 @@ p {
 
 
 
+.cast-poster {
+    width: 171px;
 
+    @media (min-width: 800px){
+        width: 178px;
+
+    }
+}
 
 
 .cast-poster:hover .cast-info-bg {
@@ -145,8 +157,8 @@ p {
     position: absolute;
     color: white;
     opacity: 0;
-    width: 113px;
-    padding: 2px 12px;
+    width: 148px;
+    padding: 2px 15px;
     // z-index:9;
 
     .cast-name {
