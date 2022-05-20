@@ -6,6 +6,8 @@ import SingleMovie from '../components/SingleMovie';
 
 function PageSingleMovie() {
     const [movieData, setMovieData] = useState(false);
+
+
     
 // this ID comes from the AppRouter.
     const { id } = useParams()
@@ -22,6 +24,9 @@ function PageSingleMovie() {
           
           fetchMovie()
     }, [id])
+
+    useEffect(() => {document.title = `FilmsTrip - the Movie Database`;
+  },[]);
 
   return (
 
