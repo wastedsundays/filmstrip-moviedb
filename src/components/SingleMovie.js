@@ -49,9 +49,12 @@ function SingleMovie({movie}) {
         <div className="cast-card">{movie.credits.cast.slice(0, 6).map(castList => 
                 <div className='cast-poster' key={castList.id}>
                     <div className='cast-info'>
-                     <p><a target="_blank" rel="noreferrer" href={`https://www.themoviedb.org/person/${castList.id}`}>More Info</a></p>
-                     <p className='cast-name'>{castList.name}</p>
+
+                    <p className='cast-name'>{castList.name}</p>
                      <p className='cast-character'>{castList.character}</p>
+                     <div >
+                            <p className='cast-more-info-button'><a target="_blank" rel="noreferrer" href={`https://www.themoviedb.org/person/${castList.id}`}>More Info</a></p>
+                        </div> 
                      <div className="cast-info-bg">
                         </div>
                      </div>

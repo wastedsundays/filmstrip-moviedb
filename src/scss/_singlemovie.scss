@@ -11,7 +11,6 @@
     @media (min-width: 800px){
         max-width: 1179px;
     }
-
 }
 
 .single-movie-backdrop {
@@ -151,8 +150,9 @@ p {
     height: 237px;
     width: 159px;
     transition: all 0.5s ease;
-    z-index:-1
+    z-index:-1;
 }
+
 .cast-info {
     position: absolute;
     color: white;
@@ -171,6 +171,17 @@ p {
     }
 }
 
-
+.cast-more-info-button{
+    border: 1px solid white;
+    padding: 10px 30px;
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 191px;
+    left: 18px;
+}
 
 
