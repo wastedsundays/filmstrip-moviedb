@@ -1,0 +1,21 @@
+@use "variables" as vari;
+
+.about-box{
+    margin: 0 auto 50px;
+    width: 85%;
+    min-width: 260px;
+    max-width: 1000px;
+    border: 2px solid vari.$black-color;
+    background-color: rgba(255,255,255,.85);
+    min-height: 500px;
+
+    p, h1, h2, img{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    img {
+        max-width: 200px;
+        display: block;
+    }
+}
