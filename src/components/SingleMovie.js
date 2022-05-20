@@ -49,6 +49,7 @@ function SingleMovie({movie}) {
         <div className="cast-card">{movie.credits.cast.slice(0, 6).map(castList => 
                 <div className='cast-poster' key={castList.id}>
                     <div className='cast-info'>
+                     <p><a target="_blank" rel="noreferrer" href={`https://www.themoviedb.org/person/${castList.id}`}>More Info</a></p>
                      <p className='cast-name'>{castList.name}</p>
                      <p className='cast-character'>{castList.character}</p>
                      <div className="cast-info-bg">
@@ -61,20 +62,15 @@ function SingleMovie({movie}) {
 
                 )}
 
-                {/* <div className='cast-hover'>  */}
-                    {/* <div className="cast-info"> */}
-                        {/* <p >{castList.name}</p><p>{castList.character}</p> */}
-                        {/* <h2>{titleTrunc}</h2>
-                        <h3>({formattedYear})</h3>
-                        <p>{movie.overview}</p> */}
-                        {/* <p>{descriptionTrunc}</p> */}
-                        {/* <Link to={`/movie/${movie.id}`} className="more-info-button">More Info</Link> */}
-                        {/* <FavButton /> */}
+                <div className="screenshot">{movie.images.backdrops.slice(0,6).map(backdropList => 
+                <div className='movie-screen' key={backdropList.id}>
+                    <img src={`https://image.tmdb.org/t/p/original${backdropList.file_path}`} alt='movie screenshot'/>
+                </div>
+            
 
-                    {/* </div> */}
-                  
+                )}
+                </div>
 
-                {/* </div> */}
         </div>
 
 
