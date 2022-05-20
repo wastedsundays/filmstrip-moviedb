@@ -9,6 +9,9 @@ function PageHome({sort}) {
 
   const [moviesData, setmoviesData] = useState(false);
 
+  useEffect(() => {document.title = `FilmsTrip - the Movie Database`;
+},[]);
+
 
 
         useEffect(() => {
