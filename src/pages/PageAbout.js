@@ -1,5 +1,7 @@
 import moviedbLogo from '../images/moviedb-logo.svg';
 import { getYear } from '../globals/globals';
+import { FaTiktok, FaTwitter, FaFacebook, FaInstagram, FaYoutubeSquare } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
 
 
 const PageAbout = () => {
@@ -14,6 +16,15 @@ const PageAbout = () => {
                     <p>Add a movie to your favourites list by clicking on it's star when browsing through the database. 
                     </p>
                 </article>
+                <div className='about-socials'>
+                    <IconContext.Provider value={{size: 35 }}>
+                    <a href='https://www.facebook.com'><FaFacebook className='fa-icon'/></a>
+                    <a href='https://www.twitter.com'><FaTwitter className='fa-icon'/></a>
+                    <a href='https://www.tiktok.com'><FaTiktok className='fa-icon'/></a>
+                    <a href='https://www.instagram.com'><FaInstagram className='fa-icon'/></a>
+                    <a href='https://www.youtube.com'><FaYoutubeSquare  className='fa-icon'/></a>
+                    </IconContext.Provider>
+                </div>
                 <h2>Credits</h2>
 
                     <article>

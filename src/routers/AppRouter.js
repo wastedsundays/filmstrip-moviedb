@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import '../scss/styles.scss';
 
-import Header from '../components/Header';
+// import Header from '../components/Header';
 import Headernew from '../components/Headernew';
 import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome.js';
