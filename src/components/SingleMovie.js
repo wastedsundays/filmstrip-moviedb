@@ -3,7 +3,10 @@ import noPoster from '../images/no-movie-poster.jpg';
 
 function SingleMovie({movie}) {
 
-   
+    //turn API runtime into mins and seconds
+    let runTime = (movie.runtime);
+    let hours = Math.floor(runTime /60);
+    let minutes = runTime % 60;
 
   return (
     <>  
@@ -31,7 +34,7 @@ function SingleMovie({movie}) {
                     <h2>{movie.title}</h2>
                     <p>{movie.tagline}</p>
                     {/* <p>{movie.release_dates.results[52].release_dates[0].certification}</p> */}
-                    <p>{`${movie.runtime} mins`}</p>
+                    <p>{`${hours}h ${minutes}min`}</p>
                     <p>{movie.release_date}</p>
                     <div className="details-genres">
                         {movie.genres.map(genreList => <p key={genreList.id}>{genreList.name}</p>)}
@@ -45,7 +48,7 @@ function SingleMovie({movie}) {
             </div>
         </div>
 
-        
+        <h2>Cast</h2>
         <div className="cast-card">{movie.credits.cast.slice(0, 6).map(castList => 
                 <div className='cast-poster' key={castList.id}>
                     <div className='cast-info'>
