@@ -12,9 +12,30 @@
 
             list-style: none;
             display: flex;
-            justify-content: space-evenly;
-            padding: 0 20px;
+            justify-content: center;
+            padding: 10px 40px;
+            text-decoration: none;
             
         }
+
+        li{
+            padding: 10px;
+            font-weight:400;
+            text-transform: uppercase;
+            border-bottom: 1px solid red;
+            a{
+                text-decoration: none;
+            }
+
+        }
+
+        .active{
+            border: 10px solid red;
+            background-color: red;
+            color: white;
+            border-radius: 12px 12px 0 0;
+
+        }
+
     }
 }
