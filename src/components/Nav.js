@@ -13,18 +13,24 @@ const Nav = ({ handleShowHideNav }) => {
         }
     }
 
+    function switchMode(e){
+        console.log("hello");
+    }
+
     return (
         <div className="header-wrapper">
             <div className='header-wrapper-mobile'>
                 <NavLink to="/"><img src={logo} onClick={closeNav} className="logo-mobile logo" alt='FilmsTrip Logo' /></NavLink>
-                <nav className="main-nav-mobile" onClick={closeNav}>
+                <nav className="main-nav-mobile">
                     <ul className='nav-menu-mobile'>
                         <li className='spacer'></li>
+                        <span onClick={closeNav}>
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/favourites">Favourites</NavLink></li>
                         <li><NavLink to="/account">Account</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
-                        <li className='spacer'><ModeSwitch /></li>
+                        </span>
+                        <li className='spacer' onClick={switchMode}><ModeSwitch /></li>
                     </ul>
                 </nav>
             </div>
@@ -39,7 +45,7 @@ const Nav = ({ handleShowHideNav }) => {
                         <NavLink to="/"><img src={logo} className="logo-desktop logo" alt="FilmsTrip Logo" /></NavLink>
                         <li><NavLink to="/account">Account</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
-                        <li className='spacer'><ModeSwitch /></li>
+                        <li className='spacer' onClick={switchMode}><ModeSwitch /></li>
                     </ul>
                 </nav>
             </div>
