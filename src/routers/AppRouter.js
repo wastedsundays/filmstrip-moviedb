@@ -16,7 +16,7 @@ function App() {
 
     return (
       <BrowserRouter>
-        <div>
+        <div className='test'>
         <Headernew />
         <Routes>
           <Route path='/' element={<PageHome sort="popular"/>} />
