@@ -68,14 +68,14 @@ function SingleMovie({movie}) {
 
                 )}
 
-                <div className="screenshot">{movie.images.backdrops.slice(0,6).map(backdropList => 
+                {/* <div className="screenshot">{movie.images.backdrops.slice(0,6).map(backdropList => 
                 <div className='movie-screen' key={backdropList.id}>
                     <img src={`https://image.tmdb.org/t/p/original${backdropList.file_path}`} alt='movie screenshot'/>
                 </div>
             
 
                 )}
-                </div>
+                </div> */}
 
         </div>
 

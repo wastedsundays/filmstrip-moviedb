@@ -12,8 +12,7 @@ function PageSingleMovie() {
 // this ID comes from the AppRouter.
     const { id } = useParams()
 
-    //https://api.themoviedb.org/3/movie/414906?api_key=e2be774394fd67e79142c1318cddcc84&language=en-US
-  
+ 
     useEffect(() => {
         const fetchMovie = async () => {
             // const res = await fetch(`https://api.themoviedb.org/3/movie/${ id }?api_key=${API_KEY}&language=en-US1&append_to_response=credits,release_dates`);
