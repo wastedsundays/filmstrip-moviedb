@@ -1,6 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../images/filmstrip-logo-white2.png';
 import ModeSwitch from './ModeSwitch';
+import { GrHomeRounded } from 'react-icons/gr';
+import { GrMoon } from 'react-icons/gr';
+import { GrActions } from 'react-icons/gr';
 
 
 const Nav = ({ handleShowHideNav }) => {
@@ -14,13 +17,13 @@ const Nav = ({ handleShowHideNav }) => {
     }
 
     function switchMode(e){
-        console.log("hello");
+        alert("hello dark mode");
     }
 
     return (
         <div className="header-wrapper">
             <div className='header-wrapper-mobile'>
-                <NavLink to="/"><img src={logo} onClick={closeNav} className="logo-mobile logo" alt='FilmsTrip Logo' /></NavLink>
+                <img src={logo} className="logo-mobile logo" alt='FilmsTrip Logo' />
                 <nav className="main-nav-mobile">
                     <ul className='nav-menu-mobile'>
                         <li className='spacer'></li>
@@ -39,13 +42,13 @@ const Nav = ({ handleShowHideNav }) => {
                 {/* <nav className="main-nav-desktop" onClick={closeNav}> */}
                 <nav className="main-nav-desktop">
                     <ul className='nav-menu-desktop'>
-                        <li className='spacer'></li>
-                        <li><NavLink to="/">Home</NavLink></li>
+                        <NavLink to="/"><li className='spacer'><GrHomeRounded /></li></NavLink>
+                        {/* <li><NavLink to="/">Home</NavLink></li> */}
                         <li><NavLink to="/favourites">Favourites</NavLink></li>
-                        <NavLink to="/"><img src={logo} className="logo-desktop logo" alt="FilmsTrip Logo" /></NavLink>
-                        <li><NavLink to="/account">Account</NavLink></li>
+                        <img src={logo} className="logo-desktop logo" alt="FilmsTrip Logo" />
+                        {/* <li><NavLink to="/account">Account</NavLink></li> */}
                         <li><NavLink to="/about">About</NavLink></li>
-                        <li className='spacer' onClick={switchMode}><ModeSwitch /></li>
+                        <li className='spacer' onClick={switchMode}><GrMoon /></li>
                     </ul>
                 </nav>
             </div>
