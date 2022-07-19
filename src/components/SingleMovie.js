@@ -2,6 +2,8 @@
 import noPoster from '../images/no-movie-poster.jpg';
 import DarkMode from '../images/dark-mode.svg';
 import LightMode from '../images/light-mode.svg';
+import { FaStar } from 'react-icons/fa';
+import { FaRegStar } from 'react-icons/fa';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, deleteItem } from '../features/favs/favsSlice';
@@ -56,8 +58,8 @@ function SingleMovie({movie, onFavsPage}) {
                     <p>{movie.overview}</p>
 
                     {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
-                                        <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><img src={LightMode} alt='Remove From Favourites' /></div> : 
-                                        <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><img src={DarkMode} className='add-fav-display' alt='Add To Favs' /><img src={DarkMode} className='add-fav-overlay' alt='Add To Favs' /></div>
+                                        <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
+                                        <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
                                     }
 
 

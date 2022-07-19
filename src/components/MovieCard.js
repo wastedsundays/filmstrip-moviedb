@@ -2,11 +2,23 @@ import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
 import { format } from 'date-fns';
 // import FavButton from './FavButton';
+import { FaStar } from 'react-icons/fa';
+import { FaRegStar } from 'react-icons/fa';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { addItem, deleteItem } from '../features/favs/favsSlice';
 
 
 
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, onFavsPage }) {
+
+  const favouriteItems = useSelector((state) => state.favs.items);
+  const dispatch = useDispatch();
+
+  function inFav(id, arr){
+      return arr.some(item => item.id === id);
+  }
 
 
 
@@ -28,6 +40,11 @@ function MovieCard({ movie }) {
               <div className="movie-info">
                 <h2>{titleTrunc}</h2>
                 <h3>({formattedYear})</h3>
+
+                {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
+                                        <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
+                                        <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
+                                    }
                 <p>{movie.overview}</p>
                 {/* <p>{descriptionTrunc}</p> */}
                 <Link to={`/movie/${movie.id}`} className="more-info-button">More Info</Link>

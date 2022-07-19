@@ -11,7 +11,7 @@ const PageFavourites = (onFavsPage) => {
         <>
         <section className='fav-page'>
             <h1>Favourites</h1>
-            <div className='favs-movie-container'>
+            <div className='movies-container'>
                 {favouriteItems.length === 0 ?
                 //  <NoFavs/> 
                  <Footer />

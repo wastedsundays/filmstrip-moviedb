@@ -11,6 +11,15 @@
     @media (min-width: 800px){
         max-width: 1179px;
     }
+
+    svg {
+        width: 2em;
+        height: 2em;
+    }
+
+    svg:hover {
+        fill: red;
+    }
 }
 
 .single-movie-backdrop {
