@@ -1,7 +1,20 @@
 // import placeholder from '../images/godzilla-vs-kong-demo-poster.jpg';
 import noPoster from '../images/no-movie-poster.jpg';
+import DarkMode from '../images/dark-mode.svg';
+import LightMode from '../images/light-mode.svg';
 
-function SingleMovie({movie}) {
+import { useSelector, useDispatch } from 'react-redux';
+import { addItem, deleteItem } from '../features/favs/favsSlice';
+
+
+function SingleMovie({movie, onFavsPage}) {
+
+    const favouriteItems = useSelector((state) => state.favs.items);
+    const dispatch = useDispatch();
+
+    function inFav(id, arr){
+        return arr.some(item => item.id === id);
+    }
 
     //turn API runtime into mins and seconds
     let runTime = (movie.runtime);
@@ -41,6 +54,11 @@ function SingleMovie({movie}) {
                     </div>
                     <p>{`Rating: ${movie.vote_average}`}</p>
                     <p>{movie.overview}</p>
+
+                    {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
+                                        <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><img src={LightMode} alt='Remove From Favourites' /></div> : 
+                                        <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><img src={DarkMode} className='add-fav-display' alt='Add To Favs' /><img src={DarkMode} className='add-fav-overlay' alt='Add To Favs' /></div>
+                                    }
 
 
                     {/* {console.log(movie.credits.cast[0].profile_path)} */}
