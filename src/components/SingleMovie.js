@@ -1,7 +1,5 @@
 // import placeholder from '../images/godzilla-vs-kong-demo-poster.jpg';
 import noPoster from '../images/no-movie-poster.jpg';
-import DarkMode from '../images/dark-mode.svg';
-import LightMode from '../images/light-mode.svg';
 import { FaStar } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
 

@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import MovieCard from '../components/MovieCard'; 
 // import NoFavs from '../components/NoFavs';
 import Footer from '../components/Footer';
+import SearchBar from '../components/Search';
 
 const PageFavourites = (onFavsPage) => {
 
@@ -10,6 +11,7 @@ const PageFavourites = (onFavsPage) => {
     return(
         <>
         <section className='fav-page'>
+            <SearchBar />
             <h1>Favourites</h1>
             <div className='movies-container'>
                 {favouriteItems.length === 0 ?

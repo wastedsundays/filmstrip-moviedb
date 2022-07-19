@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
-import { format } from 'date-fns';
+// import { format } from 'date-fns';
 // import FavButton from './FavButton';
 import { FaStar } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
@@ -22,10 +22,10 @@ function MovieCard({ movie, onFavsPage }) {
 
 
 
-  const date = new Date(movie.release_date);
+  // const date = new Date(movie.release_date);
   // const formattedDate = format(date, "MMMM d, yyyy");
   // console.log(movie.release_date);
-  const formattedYear = format(date, "yyyy");
+  // const formattedYear = format(date, "yyyy");
   const titleTrunc = (movie.title).substring(0,45);
 
 
@@ -39,7 +39,7 @@ function MovieCard({ movie, onFavsPage }) {
            <div className='info-hover'> 
               <div className="movie-info">
                 <h2>{titleTrunc}</h2>
-                <h3>({formattedYear})</h3>
+                {/* <h3>({formattedYear})</h3> */}
 
                 {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
                                         <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 

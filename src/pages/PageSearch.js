@@ -1,39 +1,64 @@
-import { useEffect, useState } from 'react';
-import Movies from '../components/Movies';
-import { API_KEY } from '../globals/globals';
-// import  searchQuery  from '../components/Search';
-
-function PageSearch() {
-
-  const [moviesData, setmoviesData] = useState(false);
-  // const { search } = window.location;
-  //const query = new URLSearchParams(search).get('s');
+import {useEffect, useState} from 'react';
+import { useSearchParams } from 'react-router-dom';
+import {API_KEY} from '../globals/globals';
+import SearchGrid from '../components/SearchGrid';
+import SearchBar from '../components/Search';
+// import MovieCard from '../components/MovieCard';
+// import SearchScrollerSection from '../components/SearchScrollerSection';
 
 
+function PageSearch(searchInput) {
+    const [searchData, setSearchData] = useState(false);
+    const [searchError, setSearchError] = useState(false);
 
-        useEffect(() => {
+    const searchParamsArray = useSearchParams()
+    const searchParams = searchParamsArray[0];
 
-          // console.log(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+    const searchErrorMessage = 'Oh no...Something went wrong...Please try again later.';
 
-        const fetchMovies = async () => {
-          const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=shrek&page=1&include_adult=false`);
-          const data = await res.json();
-          const first20Movies = data.results.splice(0,6);
-          setmoviesData(first20Movies);
-        }
+    let query = searchParams.get('q');
+        query = encodeURIComponent(query);
+
+    useEffect(() => {
+
         
-        fetchMovies()
-        }, []);
 
+        // console.log(query);
 
-        return (
-        <section className='search-results'>
-          <p>Hello From the search page</p>
-          {moviesData !== false && <Movies moviesData={moviesData} />}
+        const fetchSearchMovies = async () => {
+            const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`)
+                                    .catch(err => {
+                                        searchData !== false && setSearchData(false);
+                                        setSearchError(searchErrorMessage);
+                                    })
 
-       </section>
-  )
+            const data = await res.json();
+
+            if(data.success === false){
+                searchData !== false && setSearchData(false);
+                searchError !== false && setSearchError(false);
+                setSearchError(searchErrorMessage);
+            }else{
+                searchError !== false && setSearchError(false);
+                const first12Movies = data.results.splice(0,20);
+                setSearchData(first12Movies);
+            }
+
+        }
+        fetchSearchMovies()
+    }, [query])
+
+    // https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=${ search query here }&page=1&include_adult=false
+
+    return (
+        <div className='search-page'>
+          <SearchBar />
+        <h1>Search</h1>
+        {searchError !== false && <p className="error">{searchError}</p>}
+        {searchData !== false && <SearchGrid searchData={searchData}/>}
+        </div>
+    )
+
 }
 
 export default PageSearch
-

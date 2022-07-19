@@ -31,7 +31,7 @@ function App() {
           <Route path="/movie/:id" element={<PageSingleMovie />} />
 
           {/* Links to the other pages */}
-          <Route path="/search-results/" element={<PageSearch />} />
+          <Route path="/search" element={<PageSearch />} />
           <Route path='/favourites' element={<PageFavourites />} />
           {/* <Route path='/account' element={<PageAccount />} /> */}
           <Route path='/about' element={<PageAbout />} />

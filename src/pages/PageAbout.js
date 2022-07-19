@@ -2,11 +2,13 @@ import moviedbLogo from '../images/moviedb-logo.svg';
 import { getYear } from '../globals/globals';
 import { FaTiktok, FaTwitter, FaFacebook, FaInstagram, FaYoutubeSquare } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import SearchBar from '../components/Search';
 
 
 const PageAbout = () => {
     return(
         <section className='about-page'>
+            <SearchBar />
             <div className="about-box">
                 <h1>Have A Nice Trip</h1>
                 <article>
