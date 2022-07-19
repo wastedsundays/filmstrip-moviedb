@@ -3,9 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 import {API_KEY} from '../globals/globals';
 import SearchGrid from '../components/SearchGrid';
 import SearchBar from '../components/Search';
-// import MovieCard from '../components/MovieCard';
-// import SearchScrollerSection from '../components/SearchScrollerSection';
-
 
 function PageSearch(searchInput) {
     const [searchData, setSearchData] = useState(false);
@@ -20,10 +17,6 @@ function PageSearch(searchInput) {
         query = encodeURIComponent(query);
 
     useEffect(() => {
-
-        
-
-        // console.log(query);
 
         const fetchSearchMovies = async () => {
             const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`)
@@ -48,7 +41,6 @@ function PageSearch(searchInput) {
         fetchSearchMovies()
     }, [query])
 
-    // https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=${ search query here }&page=1&include_adult=false
 
     return (
         <div className='search-page'>

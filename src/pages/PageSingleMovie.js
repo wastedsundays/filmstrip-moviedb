@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { API_KEY } from '../globals/globals';
 import SingleMovie from '../components/SingleMovie';
+import SearchBar from "../components/Search";
 
 function PageSingleMovie() {
     const [movieData, setMovieData] = useState(false);
@@ -29,6 +30,7 @@ function PageSingleMovie() {
   return (
 
     <section className="single-movie-container-page">
+        <SearchBar />
         {movieData !== false && <SingleMovie movie={movieData}/>}
     </section>
 
