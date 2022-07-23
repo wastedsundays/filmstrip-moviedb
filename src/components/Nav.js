@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../images/filmstrip-logo-white2.png';
 import ModeSwitch from './ModeSwitch';
-import { GrHomeRounded } from 'react-icons/gr';
-import { GrMoon } from 'react-icons/gr';
-import { GrActions } from 'react-icons/gr';
+// import { GrHomeRounded } from 'react-icons/gr';
+// import { GrMoon } from 'react-icons/gr';
+// import { GrActions } from 'react-icons/gr';
 
 
 const Nav = ({ handleShowHideNav }) => {
@@ -29,11 +29,12 @@ const Nav = ({ handleShowHideNav }) => {
                         <li className='spacer'></li>
                         <span onClick={closeNav}>
                         <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/favourites">Favourites</NavLink></li>
-                        <li><NavLink to="/account">Account</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
+                        <li><NavLink to="/favourites">Favourites</NavLink></li>
+                        <li><NavLink to="/account">My Trip</NavLink></li>
+
                         </span>
-                        <li className='spacer' onClick={switchMode}><ModeSwitch /></li>
+                        {/* <li className='spacer' onClick={switchMode}><ModeSwitch /></li> */}
                     </ul>
                 </nav>
             </div>
@@ -42,13 +43,14 @@ const Nav = ({ handleShowHideNav }) => {
                 {/* <nav className="main-nav-desktop" onClick={closeNav}> */}
                 <nav className="main-nav-desktop">
                     <ul className='nav-menu-desktop'>
-                        <NavLink to="/"><li className='spacer'><GrHomeRounded /></li></NavLink>
-                        {/* <li><NavLink to="/">Home</NavLink></li> */}
-                        <li><NavLink to="/favourites">Favourites</NavLink></li>
-                        <img src={logo} className="logo-desktop logo" alt="FilmsTrip Logo" />
-                        {/* <li><NavLink to="/account">Account</NavLink></li> */}
+                        {/* <NavLink to="/"><li className='spacer'><GrHomeRounded /></li></NavLink> */}
+                        <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
-                        <li className='spacer' onClick={switchMode}><GrMoon /></li>
+                        <img src={logo} className="logo-desktop logo" alt="FilmsTrip Logo" />
+                        <li><NavLink to="/favourites">Favourites</NavLink></li>
+                        <li><NavLink to="/account">My Trip</NavLink></li>
+
+                        {/* <li className='spacer' onClick={switchMode}><GrMoon /></li> */}
                     </ul>
                 </nav>
             </div>

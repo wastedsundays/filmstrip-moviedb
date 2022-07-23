@@ -8,7 +8,7 @@ import PageHome from '../pages/PageHome.js';
 import PageSingleMovie from '../pages/PageSingleMovie.js';
 import PageSearch from  '../pages/PageSearch.js';
 import PageAbout from '../pages/PageAbout.js';
-// import PageAccount from '../pages/PageAccount.js';
+import PageAccount from '../pages/PageAccount.js';
 import PageFavourites from '../pages/PageFavourites.js';
 import Page404 from '../pages/Page404.js';
 
@@ -33,7 +33,7 @@ function App() {
           {/* Links to the other pages */}
           <Route path="/search" element={<PageSearch />} />
           <Route path='/favourites' element={<PageFavourites />} />
-          {/* <Route path='/account' element={<PageAccount />} /> */}
+          <Route path='/account' element={<PageAccount />} />
           <Route path='/about' element={<PageAbout />} />
           {/* <Route path='/single' element={<PageSingleMovie />} /> */}
           <Route path='*' element={<Page404 />} /> 
