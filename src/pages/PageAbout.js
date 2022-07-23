@@ -2,20 +2,19 @@ import moviedbLogo from '../images/moviedb-logo.svg';
 import { getYear } from '../globals/globals';
 import { FaTiktok, FaTwitter, FaFacebook, FaInstagram, FaYoutubeSquare } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import SearchBar from '../components/Search';
 import { NavLink } from 'react-router-dom';
 
 
 const PageAbout = () => {
     return(
         <section className='about-page'>
-            <SearchBar />
             <div className="about-box">
                 <h1>Have A Nice Trip</h1>
                 <article>
-                    <p>Let's take a trip through the films</p> 
+                    <p>Let's take a trip through the films.</p> 
                     <p>FilmsTrip is the internet movie database.</p> <p>On the main page, you can choose to view the top movies for each category: Popular movies, New Releases, Upcoming releases and Top Rated.</p>
                     <p>You can view more details by selecting a movie, which will take you to the individual movie page.</p> 
+                    <p>Create a list of all the movies you've seen on the 'My Trip' page.</p>
                     <p>Add a movie to your favourites list by clicking on it's star when browsing through the database. 
                     </p>
                 </article>
@@ -31,7 +30,7 @@ const PageAbout = () => {
                 <h2>Credits</h2>
 
                     <article>
-                        <p>FilmsTrip was created, designed, and coded by Adam H.</p>
+                        <p>FilmsTrip was created, designed, and built by Adam H.</p>
                         <p>&copy; {getYear()} <a href="https://www.adamh.ca">Adam H.</a></p>
                     </article>
                     <article>

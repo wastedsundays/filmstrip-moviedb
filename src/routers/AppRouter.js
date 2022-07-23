@@ -11,6 +11,7 @@ import PageAbout from '../pages/PageAbout.js';
 import PageAccount from '../pages/PageAccount.js';
 import PageFavourites from '../pages/PageFavourites.js';
 import Page404 from '../pages/Page404.js';
+import SearchBar from '../components/Search';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <BrowserRouter>
         <div className='test'>
         <Headernew />
+        <SearchBar />
         <Routes>
           <Route path='/' element={<PageHome sort="popular"/>} />
 

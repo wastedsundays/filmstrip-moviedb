@@ -32,7 +32,6 @@ function PageHome({sort}) {
 
         return (
         <section className='home-page'>
-          <SearchBar />
           <NavSort />
 
           {moviesData !== false && <Movies moviesData={moviesData} />}

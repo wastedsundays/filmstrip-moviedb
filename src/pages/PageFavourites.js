@@ -11,7 +11,6 @@ const PageFavourites = (onFavsPage) => {
     return(
         <>
         <section className='fav-page'>
-            <SearchBar />
             <h1>Favourites</h1>
             <div className='movies-container'>
                 {favouriteItems.length === 0 ?

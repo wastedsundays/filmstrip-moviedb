@@ -30,7 +30,6 @@ function PageSingleMovie() {
   return (
 
     <section className="single-movie-container-page">
-        <SearchBar />
         {movieData !== false && <SingleMovie movie={movieData}/>}
     </section>
 
