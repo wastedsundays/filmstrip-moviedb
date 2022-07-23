@@ -32,12 +32,12 @@ const SearchBar = (movie) => {
         
             <div className='search-wrapper'>
                 <form action="#" onSubmit={submitSearch}>
-                <label htmlFor="search" className='sr-only'>Search: </label>
+                {/* <label htmlFor="search" className='sr-only'>Search: </label> */}
                 <input className='search-bar' type="text" placeholder="Search.." id="search" name="search" onChange={(e) => searchItems(e.target.value)} />
-                    <button className='search-bttn' type="submit">
-                        {/* <img src={searchIconWhite} className='search-white' alt='Search' /> */}
+                    {/* <button className='search-bttn' type="submit">
+                        <img src={searchIconWhite} className='search-white' alt='Search' />
                         <span className='sr-only'>Search</span>
-                    </button>
+                    </button> */}
                 </form>
             </div>
     )
