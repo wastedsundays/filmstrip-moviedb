@@ -29,7 +29,7 @@ const SearchBar = (movie) => {
         
             <div className='search-wrapper'>
                 <form action="#" onSubmit={submitSearch}>
-                <input className='search-bar' type="text" placeholder="Search..!" id="search" name="search" onChange={(e) => searchItems(e.target.value)} />
+                    <input className='search-bar' type="text" placeholder="Search..!" id="search" name="search" onChange={(e) => searchItems(e.target.value)} />
                 </form>
             </div>
     )

@@ -1,3 +1,9 @@
+
+
+body {
+    margin: 0;
+}
+
 #root::before {
     content: '';
     background-image: url('../images/film-bg-contrast.jpg');
@@ -12,6 +18,18 @@
     opacity: 0.2;
 }
 
-body {
-    margin: 0;
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    margin: 0 auto 50px;
+    width: 90%;
+    min-width: 260px;
+    max-width: 1200px;
+
+
 }
