@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import MovieCard from '../components/MovieCard'; 
+// import MovieCard from '../components/MovieCard'; 
 // import NoFavs from '../components/NoFavs';
 import Footer from '../components/Footer';
 

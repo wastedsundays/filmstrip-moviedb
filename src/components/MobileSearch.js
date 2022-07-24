@@ -2,7 +2,7 @@ import {useNavigate} from 'react-router-dom';
 import {useState} from 'react';
 
 
-const SearchBar = (movie) => {
+const MobileSearchBar = (movie) => {
 
     const [searchInput, setSearchInput] = useState('');
 
@@ -27,12 +27,12 @@ const SearchBar = (movie) => {
 
     return(
         
-            <div className='search-wrapper'>
+            <div className='mobile-search-wrapper'>
                 <form action="#" onSubmit={submitSearch}>
-                    <input className='search-bar' type="text" placeholder="Search for a movie ..." id="search" name="search" onChange={(e) => searchItems(e.target.value)} />
+                    <input className='mobile-search-bar' type="text" placeholder="Search for a movie ..." id="mobile-search" name="search" onChange={(e) => searchItems(e.target.value)} />
                 </form>
             </div>
     )
 }
 
-export default SearchBar;
+export default MobileSearchBar;
