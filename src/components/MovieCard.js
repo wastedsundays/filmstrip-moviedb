@@ -35,7 +35,7 @@ function MovieCard({ movie, onFavsPage }) {
 
             <div className='moviecard-rating-section'> 
               <h3>{movie.vote_average}</h3>
-
+{/* use this for when we add the watch history / films trip feature */}
               {/* {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
                 <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
                 <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
