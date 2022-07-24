@@ -44,7 +44,7 @@ function SingleMovie({movie, onFavsPage}) {
                 </div>
 
                 <div className="single-movie-info">
-                    <h2>{movie.title}</h2>
+                    <h1>{movie.title}</h1>
                     <p>{movie.tagline}</p>
                     {/* <p>{movie.release_dates.results[52].release_dates[0].certification}</p> */}
                     <p>{`${hours}h ${minutes}min`}</p>

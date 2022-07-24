@@ -1,9 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../images/filmstrip-logo-white2.png';
-import ModeSwitch from './ModeSwitch';
-// import { GrHomeRounded } from 'react-icons/gr';
-// import { GrMoon } from 'react-icons/gr';
-// import { GrActions } from 'react-icons/gr';
+// import SearchBar from './Search';
 
 
 const Nav = ({ handleShowHideNav }) => {
@@ -16,9 +13,6 @@ const Nav = ({ handleShowHideNav }) => {
         }
     }
 
-    function switchMode(e){
-        alert("hello dark mode");
-    }
 
     return (
         <div className="header-wrapper">
@@ -26,15 +20,14 @@ const Nav = ({ handleShowHideNav }) => {
                 <img src={logo} className="logo-mobile logo" alt='FilmsTrip Logo' />
                 <nav className="main-nav-mobile">
                     <ul className='nav-menu-mobile'>
-                        <li className='spacer'></li>
                         <span onClick={closeNav}>
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
                         <li><NavLink to="/favourites">Favourites</NavLink></li>
                         <li><NavLink to="/account">My Trip</NavLink></li>
+                        {/* <li className='mobile-searchbar'><SearchBar /></li> */}
 
                         </span>
-                        {/* <li className='spacer' onClick={switchMode}><ModeSwitch /></li> */}
                     </ul>
                 </nav>
             </div>

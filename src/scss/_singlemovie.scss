@@ -1,6 +1,16 @@
+.single-movie-container-page {
+    h1 {
+        @media screen and (min-width: 800px) {
+            text-align: left;    
+        }
+        
+    }
+}
+
+
 .single-movie-container {
     position: relative;
-    width: 90%;
+    // width: 90%;
     min-width: 288px;
     max-width: 565px;
     // max-width: 1179px;
@@ -33,7 +43,7 @@
     background-size: cover;
     opacity: .1;
 
-    @media (min-width: 450px){
+    @media (min-width: 800px){
         display: block;
     }
 }
@@ -91,13 +101,12 @@
 
 
 .cast-card {
-    padding: 50px 0;
     display: flex;
     flex-wrap: wrap;
     row-gap: 21px;
     column-gap: 21px;
     justify-content: center;
-    width: 90%;
+    // width: 90%;
     min-width: 288px;
     max-width: 1179px;
     margin: 0 auto;

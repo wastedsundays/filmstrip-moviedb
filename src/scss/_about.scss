@@ -1,13 +1,19 @@
 @use "variables" as vari;
 
 .about-page {
-    img {
+    .movie-db-logo {
         max-width: 200px;
         display: block;
         margin: 0 auto;
 
         @media screen and (min-width: 769px) {
             margin: 0 auto 0 0;
+        }
+    }
+
+    article {
+        @media screen and (min-width: 769px) {
+            width: 50%;    
         }
     }
 }
@@ -31,7 +37,7 @@
 }
 
 .about-page a {
-        color: black;
+        color: vari.$black-color;
 
         :hover {
             color: red;
@@ -47,7 +53,14 @@
         text-align: left;
     }
 
-    .about-page img {
+    .movie-db-logo {
         margin: 0 auto 0 0;
     }    
 }
+
+.about-details {
+    position: absolute;
+    top: 263px;
+}
+
+
