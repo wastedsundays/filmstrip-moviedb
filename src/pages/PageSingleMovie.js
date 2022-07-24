@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { API_KEY } from '../globals/globals';
 import SingleMovie from '../components/SingleMovie';
-import SearchBar from "../components/Search";
 
 function PageSingleMovie() {
     const [movieData, setMovieData] = useState(false);

@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react';
 import { useSearchParams } from 'react-router-dom';
 import {API_KEY} from '../globals/globals';
 import SearchGrid from '../components/SearchGrid';
-import SearchBar from '../components/Search';
 
 function PageSearch(searchInput) {
     const [searchData, setSearchData] = useState(false);

@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Movies from '../components/Movies';
 import { API_KEY } from '../globals/globals';
 import NavSort from '../components/NavSort';
-import SearchBar from '../components/Search';
 
 function PageHome({sort}) {
 

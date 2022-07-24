@@ -1,4 +1,5 @@
 // import {NavLink} from 'react-router-dom';
+import { getYear } from '../globals/globals';
 
 const Footer = () => {
 
@@ -8,9 +9,9 @@ const Footer = () => {
             
                 <nav>
                     <ul className='footer'>
-                        <li>Twitter</li>
-                        <li>Twitter</li>
-                        <li>Twitter</li>
+                        <li>Link</li>
+                        {<li>&copy; {getYear()} Adam H.</li>}
+                        <li>Link</li>
                     </ul>
                 </nav>
         

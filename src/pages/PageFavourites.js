@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import MovieCard from '../components/MovieCard'; 
 // import NoFavs from '../components/NoFavs';
 import Footer from '../components/Footer';
-import SearchBar from '../components/Search';
+
 
 const PageFavourites = (onFavsPage) => {
 

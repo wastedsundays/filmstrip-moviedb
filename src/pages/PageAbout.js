@@ -1,15 +1,25 @@
 import moviedbLogo from '../images/moviedb-logo.svg';
-import { getYear } from '../globals/globals';
+import { appTitle } from '../globals/globals';
+import { useEffect } from "react";
 import { FaTiktok, FaTwitter, FaFacebook, FaInstagram, FaYoutubeSquare } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { NavLink } from 'react-router-dom';
 
 
 const PageAbout = () => {
+
+      // On mount: 
+  //    Set document title
+  //    Scroll back to the top
+  useEffect(() => {
+    document.title = `About - ${appTitle}`;
+    window.scrollTo(0, 0);
+  }, [])
+  
     return(
         <section className='about-page'>
+            <h1>Have A Nice Trip</h1>
             <div className="about-box">
-                <h1>Have A Nice Trip</h1>
                 <article>
                     <p>Let's take a trip through the films.</p> 
                     <p>FilmsTrip is the internet movie database.</p> <p>On the main page, you can choose to view the top movies for each category: Popular movies, New Releases, Upcoming releases and Top Rated.</p>
@@ -18,26 +28,24 @@ const PageAbout = () => {
                     <p>Add a movie to your favourites list by clicking on it's star when browsing through the database. 
                     </p>
                 </article>
-                <div className='about-socials'>
-                    <IconContext.Provider value={{size: 35 }}>
-                    <NavLink to="#"><FaFacebook className='fa-icon'/></NavLink>
-                    <NavLink to="#"><FaTwitter className='fa-icon'/></NavLink>
-                    <NavLink to="#"><FaTiktok className='fa-icon'/></NavLink>
-                    <NavLink to="#"><FaInstagram className='fa-icon'/></NavLink>
-                    <NavLink to="#"><FaYoutubeSquare  className='fa-icon'/></NavLink>
-                    </IconContext.Provider>
-                </div>
-                <h2>Credits</h2>
-
-                    <article>
-                        <p>FilmsTrip was created, designed, and built by Adam H.</p>
-                        <p>&copy; {getYear()} <a href="https://www.adamh.ca">Adam H.</a></p>
-                    </article>
-                    <article>
-                        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
-                        <img src={moviedbLogo} alt="The Movie DB" />
-                    </article>
-
+                <article>
+                    <h2>Be Social</h2>
+                    <nav className='about-socials'>
+                        <IconContext.Provider value={{size: 35 }}>
+                        <NavLink to="#"><FaFacebook className='fa-icon'/></NavLink>
+                        <NavLink to="#"><FaTwitter className='fa-icon'/></NavLink>
+                        <NavLink to="#"><FaTiktok className='fa-icon'/></NavLink>
+                        <NavLink to="#"><FaInstagram className='fa-icon'/></NavLink>
+                        <NavLink to="#"><FaYoutubeSquare  className='fa-icon'/></NavLink>
+                        </IconContext.Provider>
+                    </nav>
+                </article>
+                <article>
+                    <h2>Credits</h2>
+                    <p>FilmsTrip was created, designed, and built by Adam H.</p>
+                    <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+                    <img src={moviedbLogo} alt="The Movie DB" />
+                </article>
             </div>
         </section>
     )
