@@ -12,7 +12,7 @@ const PageAccount = (onFavsPage) => {
             <div className='section-title'>
                 <h1>My Films Trip</h1>
                 <hr/>
-                <div className='movies-container'>
+                <div className='my-trip-container'>
                 {favouriteItems.length === 0 ?
                 //  <NoFavs/> 
                  <Footer />

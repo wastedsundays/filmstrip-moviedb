@@ -15,7 +15,7 @@ function PageSingleMovie() {
  
     useEffect(() => {
         const fetchMovie = async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/${ id }?api_key=${API_KEY}&append_to_response=credits,release_dates,images`);  
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${ id }?api_key=${API_KEY}&append_to_response=credits,release_dates,images,videos`);  
             const data = await res.json();
             setMovieData(data);
         } 

@@ -50,15 +50,18 @@ function SingleMovie({movie, onFavsPage}) {
                     <p>{`${hours}h ${minutes}min`}</p>
                     <p>{movie.release_date}</p>
                     <div className="details-genres">
-                        {movie.genres.map(genreList => <p key={genreList.id}>{genreList.name}</p>)}
+                        <ul>
+                            {movie.genres.map(genreList => <li key={genreList.id}>{genreList.name}</li>)}
+                        </ul>
                     </div>
-                    <p>{`Rating: ${movie.vote_average}`}</p>
+                    <p>{movie.vote_average}</p>
+                    {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
+                        <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
+                        <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
+                    }
                     <p>{movie.overview}</p>
 
-                    {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
-                                        <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
-                                        <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
-                                    }
+
 
 
                     {/* {console.log(movie.credits.cast[0].profile_path)} */}

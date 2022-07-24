@@ -1,19 +1,20 @@
 .movie-card {
     font-size: 90%;
+
     h2, h3 {
         text-align: center;
         margin: 0;
-        font-weight: 200;
-
+        font-weight: 300;
     }
+
     p {
         padding: 0 10px;
-
         display: -webkit-box;
-        -webkit-line-clamp: 9;
+        -webkit-line-clamp: 10;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        font-weight: 300;
     }
 }
 
@@ -75,6 +76,8 @@
     width: 80px;
     display: block;
     margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
     text-align: center;
     color: white;
     position: absolute;
@@ -87,13 +90,23 @@
     color: black;
 }
 
+.moviecard-rating-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
 
-// for testing - turn off when you're done styling the home page
-// .movie-info-bg {
-//     opacity: 1;
-// }
+    h3 {
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
 
-// .movie-info {
-//     opacity: 1;
-//     z-index:100;
-// }
+    svg {
+        height: 1.25rem;
+        width: 1.25rem
+    }
+}
+
+.movie-card-title {
+    height: 50px;
+    padding-bottom: 10px;
+}
