@@ -2,7 +2,7 @@
 import noPoster from '../images/no-movie-poster.jpg';
 import { FaStar } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
-
+import { format } from 'date-fns';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, deleteItem } from '../features/favs/favsSlice';
 
@@ -21,9 +21,18 @@ function SingleMovie({movie, onFavsPage}) {
     let hours = Math.floor(runTime /60);
     let minutes = runTime % 60;
 
+    let date = "";
+    // error handling for release dates
+    if (movie.release_date === undefined || movie.release_date === ""){
+        date = 1920-4-20;
+    } else {
+        date = new Date(movie.release_date);
+    }
+
+    const formattedDate = format(date, "MMMM do, yyyy");
+
   return (
     <>  
-
         <div className="single-movie-container">
             <div className="single-movie-backdrop"
                 style={{
@@ -46,28 +55,30 @@ function SingleMovie({movie, onFavsPage}) {
                 <div className="single-movie-info">
                     <h1>{movie.title}</h1>
                     <p>{movie.tagline}</p>
-                    {/* <p>{movie.release_dates.results[52].release_dates[0].certification}</p> */}
-                    <p>{`${hours}h ${minutes}min`}</p>
-                    <p>{movie.release_date}</p>
+                    <div className="single-movie-info-details">
+                        <p>{`${hours}h ${minutes}min`}</p>
+                        <p>{formattedDate}</p>
+                    </div>
+
                     <div className="details-genres">
-                        <ul>
+                        <ul className='genres-list'>
                             {movie.genres.map(genreList => <li key={genreList.id}>{genreList.name}</li>)}
                         </ul>
                     </div>
-                    <p>{movie.vote_average}</p>
-                    {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
-                        <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
-                        <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
-                    }
+                    <div className='single-movie-rating-section'>
+                        <p>{`Rating: ${movie.vote_average}`}</p>
+                        {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
+                            <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
+                            <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
+                        }
+                    </div>
+                    <h3>Overview:</h3>
                     <p>{movie.overview}</p>
 
-
-
-
-                    {/* {console.log(movie.credits.cast[0].profile_path)} */}
                 </div>
             </div>
         </div>
+
 
         <h2>Cast</h2>
         <div className="cast-card">{movie.credits.cast.slice(0, 6).map(castList => 

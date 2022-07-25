@@ -1,4 +1,28 @@
-.single-movie-container-page {
+
+.single-movie-container {
+    position: relative;
+    min-width: 288px;
+    max-width: 565px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 1.5;
+
+
+
+    @media (min-width: 800px){
+        max-width: 1179px;
+    }
+
+    svg {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    svg:hover {
+        fill: red;
+    }
+
     h1 {
         @media screen and (min-width: 800px) {
             text-align: left;    
@@ -7,28 +31,29 @@
     }
 }
 
+.genres-list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin-left: 0;
 
-.single-movie-container {
-    position: relative;
-    // width: 90%;
-    min-width: 288px;
-    max-width: 565px;
-    // max-width: 1179px;
-    margin: 0 auto;
-    padding: 10px;
-    box-sizing: border-box;
-
-    @media (min-width: 800px){
-        max-width: 1179px;
+    li {
+        font-style: italic;
+        padding-right: .4rem;
     }
+}
 
-    svg {
-        width: 2em;
-        height: 2em;
-    }
-
-    svg:hover {
-        fill: red;
+.single-movie-rating-section {
+    font-size: 1.25em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    
+    @media screen and (min-width: 800px) {
+        max-width: 315px;
+        display: block;
     }
 }
 
@@ -91,37 +116,29 @@
         margin: 0 0 10px 0;
     }
 }
-
-
-
-
-
-
-
-
-
-.cast-card {
+.single-movie-info-details {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 21px;
-    column-gap: 21px;
-    justify-content: center;
-    // width: 90%;
-    min-width: 288px;
-    max-width: 1179px;
-    margin: 0 auto;
-    img{
-        width: 158px;
-        border: 10px solid white;
-    }
-
-
+    width: 100%;
+    justify-content: space-between;
+    max-width: 315px;
 }
-
 
 .details-genres {
     display: flex;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -139,77 +156,7 @@ p {
 
 
 
-.cast-poster {
-    width: 171px;
 
-    @media (min-width: 800px){
-        width: 178px;
-
-    }
-}
-
-
-.cast-poster:hover .cast-info-bg {
-    opacity: .85;
-    transition: all .5s ease-out;
-}
-
-.cast-poster:hover .cast-info {
-    opacity: 1;
-    transition: all .5s ease-out;
-    z-index:1;
-}
-
-.cast-info-bg{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: black;
-    height: 237px;
-    width: 159px;
-    transition: all 0.5s ease;
-    z-index:-1;
-}
-
-.cast-info {
-    position: absolute;
-    color: white;
-    opacity: 0;
-    width: 148px;
-    padding: 2px 15px;
-    // z-index:9;
-
-    .cast-name {
-        font-size: 95%;
-        font-weight: 500;
-    }
-
-    .cast-character {
-        font-size: 90%;
-    }
-}
-
-.cast-more-info-button{
-    border: 1px solid white;
-    padding: 10px 30px;
-    width: 80px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    position: absolute;
-    top: 191px;
-    left: 18px;
-
-    a{
-        color: white;
-    }
-}
-
-.cast-more-info-button:hover {
-    background-color: rgba(255,255,255,.85);
-    a{color: black;}
-}
 
 
 .screenshot {
