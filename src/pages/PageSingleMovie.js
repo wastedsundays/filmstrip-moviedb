@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { appTitle } from "../globals/globals";
 import { useState } from "react";
 import { useEffect } from "react";
 import { API_KEY } from '../globals/globals';
@@ -9,6 +10,13 @@ function PageSingleMovie() {
     
 // this ID comes from the AppRouter.
     const { id } = useParams()
+
+              // On mount: 
+  //    Set document title
+  //    Scroll back to the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
      useEffect(() => {
         const fetchMovie = async () => {

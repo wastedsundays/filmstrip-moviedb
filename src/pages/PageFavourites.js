@@ -1,10 +1,20 @@
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { appTitle } from '../globals/globals';
 import MovieCard from '../components/MovieCard'; 
 // import NoFavs from '../components/NoFavs';
 import Footer from '../components/Footer';
 
 
 const PageFavourites = (onFavsPage) => {
+
+              // On mount: 
+  //    Set document title
+  //    Scroll back to the top
+  useEffect(() => {
+    document.title = `Favourites Page - ${appTitle}`;
+    window.scrollTo(0, 0);
+  }, [])
 
     const favouriteItems = useSelector((state) => state.favs.items);
 
