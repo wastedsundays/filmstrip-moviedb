@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { API_KEY } from '../globals/globals';
 
 
-const PageAbout = () => {
+const PageAbout = (movie) => {
 
       // On mount: 
   //    Set document title
@@ -17,12 +17,33 @@ const PageAbout = () => {
     window.scrollTo(0, 0);
   }, [])
 
+  const [movieBackdrop, setMovieBackdrop] = useState("");
+
+  const backdropUrl = "https://image.tmdb.org/t/p/w1280"
+
+  useEffect(() => {
+
+      const fetchMovieBackdrops = async () => {
+              const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+              const data = await res.json();
+              const randomBackdrop = data.results[Math.floor(Math.random()*data.results.length)].backdrop_path
+              setMovieBackdrop(backdropUrl+randomBackdrop);
+
+      }
+      fetchMovieBackdrops()
+
+  }, []);
+
+
+
 
     return(
         <>
         <section className='about-page'>
             <h1>Have A Nice Trip</h1>
             <div className="about-box">
+
+                <div className='about-details'>
                     <article>
                         <p>Let's take a trip through the films.</p> 
                         <p>FilmsTrip is the internet movie database.</p> <p>On the main page, you can choose to view the top movies for each category: Popular movies, New Releases, Upcoming releases and Top Rated.</p>
@@ -49,6 +70,12 @@ const PageAbout = () => {
                         <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
                         <img className='movie-db-logo' src={moviedbLogo} alt="The Movie DB" />
                     </article>
+                </div>
+                <div className='about-bg' 
+                        style={{
+                            backgroundImage: `url(${movieBackdrop})`
+                        }}>
+                </div>
             </div>
         </section>
         
