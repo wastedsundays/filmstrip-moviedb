@@ -24,7 +24,7 @@ const PageAbout = (movie) => {
   useEffect(() => {
 
       const fetchMovieBackdrops = async () => {
-              const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+              const res = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
               const data = await res.json();
               const randomBackdrop = data.results[Math.floor(Math.random()*data.results.length)].backdrop_path
               setMovieBackdrop(backdropUrl+randomBackdrop);

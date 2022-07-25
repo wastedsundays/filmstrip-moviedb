@@ -11,12 +11,7 @@ function PageSingleMovie() {
 // this ID comes from the AppRouter.
     const { id } = useParams()
 
-              // On mount: 
-  //    Set document title
-  //    Scroll back to the top
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [])
+
 
      useEffect(() => {
         const fetchMovie = async () => {
@@ -28,8 +23,13 @@ function PageSingleMovie() {
           fetchMovie()
     }, [id])
 
-    useEffect(() => {document.title = `FilmsTrip - the Movie Database`;
-  },[]);
+    useEffect(() => {
+      if (movieData) {
+        document.title = `${movieData.title} - ${appTitle}`
+      }
+      window.scrollTo(0, 0)
+    }, [movieData])
+
 
   return (
 
