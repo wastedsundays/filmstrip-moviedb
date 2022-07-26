@@ -9,9 +9,7 @@ const MobileSearchBar = (movie) => {
     const navigate = useNavigate();
 
     const searchItems = (searchValue) => {
-        //searchValue = searchValue.replace(/ /g,'%')
         let uriEncodedSearchValue = encodeURIComponent(searchValue);
-        // console.log(uriEncodedSearchValue);
         setSearchInput(uriEncodedSearchValue);
     }
 
@@ -22,16 +20,14 @@ const MobileSearchBar = (movie) => {
         }
         e.target.elements.search.value = '';
         navigate(`/search?q=${searchInput}`, { replace: true })
-        
     }
 
     return(
-        
-            <div className='mobile-search-wrapper'>
-                <form action="#" onSubmit={submitSearch}>
-                    <input className='mobile-search-bar' type="text" placeholder="Search for a movie ..." id="mobile-search" name="search" onChange={(e) => searchItems(e.target.value)} />
-                </form>
-            </div>
+        <div className='mobile-search-wrapper'>
+            <form action="#" onSubmit={submitSearch}>
+                <input className='mobile-search-bar' type="text" placeholder="Search for a movie ..." id="mobile-search" name="search" onChange={(e) => searchItems(e.target.value)} />
+            </form>
+        </div>
     )
 }
 
