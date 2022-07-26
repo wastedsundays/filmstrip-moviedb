@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 function NavSort() {
   return (
     <nav className='nav-sort'>
-        <ul>
+        <ul className='nav-sort-tabs'>
             <li>
                 <NavLink to="/sort/popular">Popular</NavLink>
             </li>
@@ -17,11 +17,8 @@ function NavSort() {
                 <NavLink to="/sort/upcoming">Upcoming</NavLink>
             </li>
         </ul>
-
     </nav>
-    
-
-    
+   
   )
 }
 

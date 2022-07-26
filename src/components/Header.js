@@ -26,6 +26,7 @@ const Header = () => {
 
     return (
         <div className={navOpen ? 'show' : undefined}>
+            
             {/* <h1><Link to="/">{appTitle}</Link></h1> */}
             {/**
              * HTML for the Hamburger icon modified from HTMl 
@@ -40,7 +41,6 @@ const Header = () => {
                     <span className="line"></span>
                     <span className="line"></span>
                 </span>
-                {/* <span className="sr-only">Menu</span> */}
             </button>
             <Nav handleShowHideNav={showHideNav} />
         </div>
