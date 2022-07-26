@@ -9,8 +9,12 @@
     max-width: 1179px;
     margin: 0 auto;
     img{
-        width: 158px;
+        width: 151px;
         border: 10px solid white;
+
+        @media screen and (min-width: 800px) {
+            width: 158px;
+        }
     }
 
 
@@ -42,18 +46,26 @@
     top: 10px;
     left: 10px;
     background-color: black;
-    height: 237px;
-    width: 159px;
+    height: 227px;
+    width: 151px;
     transition: all 0.5s ease;
     z-index:-1;
+    @media screen and (min-width: 800px) {
+        width: 159px;
+        height: 237px;
+    }
 }
 
 .cast-info {
     position: absolute;
     color: white;
     opacity: 0;
-    width: 148px;
+    width: 141px;
     padding: 2px 15px;
+
+    @media screen and (min-width: 800px) {
+        width: 148px;
+    }
 
     .cast-name {
         font-size: 95%;
@@ -77,13 +89,21 @@
     display: block;
     margin: 0 auto;
     text-align: center;
+    text-transform: uppercase;
+    
     color: white;
     position: absolute;
     top: 191px;
-    left: 18px;
+    left: 15px;
+
+    @media screen and (min-width: 800px) {
+        left: 18px;
+    }
+
+    
 
     a{
-        color: white;
+        color: white;text-decoration: none;
     }
 }
 

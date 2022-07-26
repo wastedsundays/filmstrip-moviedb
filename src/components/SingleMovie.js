@@ -31,6 +31,7 @@ function SingleMovie({movie, onFavsPage}) {
 
     const formattedDate = format(date, "MMMM do, yyyy");
 
+
   return (
     <>  
         <div className="single-movie-container">
@@ -67,6 +68,7 @@ function SingleMovie({movie, onFavsPage}) {
                     </div>
                     <div className='single-movie-rating-section'>
                         <p>{`Rating: ${movie.vote_average}`}</p>
+                        {/* <p>{`Rating: ${formattedRating}`}</p> */}
                         {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
                             <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
                             <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>

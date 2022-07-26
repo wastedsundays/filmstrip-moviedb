@@ -22,6 +22,7 @@ function MovieCard({ movie, onFavsPage }) {
   // const formattedYear = format(date, "yyyy");
 
 
+
   return (
     <div className="movie-card">
       <div className="movie-poster">
