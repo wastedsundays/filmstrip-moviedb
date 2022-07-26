@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { appTitle } from '../globals/globals';
 import MovieCard from '../components/MovieCard'; 
-// import NoFavs from '../components/NoFavs';
+import NoFaves from '../components/NoFaves';
 import Footer from '../components/Footer';
 
 
@@ -24,8 +24,7 @@ const PageFavourites = (onFavsPage) => {
             <h1>Favourites</h1>
             <div className='movies-container'>
                 {favouriteItems.length === 0 ?
-                //  <NoFavs/> 
-                 <Footer />
+                 <NoFaves/> 
                  : favouriteItems.map(movie => <MovieCard key={movie.id} movie={movie} onFavsPage={true} />)}
             </div>
         </section>

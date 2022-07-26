@@ -37,7 +37,8 @@
         // @include flatten($is-list: true);
     }
     a {
-        // color: $light;
+        text-transform: uppercase;
+        color: black;
         text-decoration: none;
         display: block;
         line-height: 50px;
@@ -53,35 +54,5 @@
             background-color: rgba(white, 0.2);
         }
     }
-
-    // @media (min-width: em(600)){
-    //     height: auto;
-    //     visibility: visible;
-    //     transition: none;
-
-    //     .show & {
-    //         transition: none;
-    //         height: auto;
-    //     }
-        
-    //     ul {
-    //         display: flex;
-    //     }
-
-    //     li {
-    //         flex: 1;
-    //     }
-
-    //     a {
-    //         padding: 0;
-    //         text-align: center;
-    //         border-top:  none;
-    //         @at-root .main-nav-mobile li:not(:first-child) a {
-    //             border-top: none;
-    //             border-left: 3px solid grey;
-    //         }
-    //     }
-
-    // }
 
 }
