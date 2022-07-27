@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../images/filmstrip-logo-white2.png';
-import MobileSearchBar from './MobileSearch';
+// import MobileSearchBar from './MobileSearch';
+import {useNavigate} from 'react-router-dom';
+import {useState} from 'react';
 
 const Nav = ({ handleShowHideNav , handleLogoButton }) => {
     
@@ -14,6 +16,26 @@ const Nav = ({ handleShowHideNav , handleLogoButton }) => {
 
     function homeButton(e){
         handleLogoButton();
+    }
+
+
+    const [searchInput, setSearchInput] = useState('');
+
+    const navigate = useNavigate();
+
+    const searchItems = (searchValue) => {
+        let uriEncodedSearchValue = encodeURIComponent(searchValue);
+        setSearchInput(uriEncodedSearchValue);
+    }
+
+    function submitSearch(e){
+        e.preventDefault();
+        handleLogoButton();
+        if(searchInput === ''){
+            return;
+        }
+        e.target.elements.search.value = '';
+        navigate(`/search?q=${searchInput}`, { replace: true })
     }
 
     
@@ -30,8 +52,13 @@ const Nav = ({ handleShowHideNav , handleLogoButton }) => {
                         <li><NavLink to='/favourites'>Favourites</NavLink></li>
                         <li><NavLink to='/account'>My Trip</NavLink></li>
                         </span>
-                        <li className='mobile-searchbar'><MobileSearchBar /></li>
-                        
+                        <li className='mobile-searchbar'>
+                            <div className='mobile-search-wrapper'>
+                                <form action="#" onSubmit={submitSearch}>
+                                    <input className='mobile-search-bar' type="text" placeholder="Search for a movie ..." id="mobile-search" name="search" onChange={(e) => searchItems(e.target.value)} />
+                                </form>
+                            </div>
+                        </li>    
                     </ul>
                 </nav>
             </div>
