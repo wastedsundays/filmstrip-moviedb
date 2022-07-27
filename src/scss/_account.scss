@@ -1,0 +1,15 @@
+.my-trip-container {
+    list-style: none;
+    @media screen and (min-width: 410px) {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: disc;
+    }
+
+
+    li {
+        padding-left: 1rem;
+        margin-bottom: .75rem;
+
+    }
+}
