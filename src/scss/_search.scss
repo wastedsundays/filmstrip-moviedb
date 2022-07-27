@@ -1,10 +1,17 @@
 .search-wrapper {
-    position: fixed;
-    top: 90px;
-    left: 0;
-    text-align: center;
-    right: 0;
-    z-index: 6;
+    display: none; 
+
+    @media screen and (min-width: 769px) {
+        display: inline;
+        position: fixed;
+        top: 90px;
+        left: 0;
+        text-align: center;
+        right: 0;
+        z-index: 6;
+    }
+
+
 
     // @media screen and (min-width: 615px) {
     //     top: 20px;

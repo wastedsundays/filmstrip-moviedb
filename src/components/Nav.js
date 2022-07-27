@@ -55,7 +55,7 @@ const Nav = ({ handleShowHideNav , handleLogoButton }) => {
                         <li className='mobile-searchbar'>
                             <div className='mobile-search-wrapper'>
                                 <form action="#" onSubmit={submitSearch}>
-                                    <input className='mobile-search-bar' type="text" placeholder="Search for a movie ..." id="mobile-search" name="search" onChange={(e) => searchItems(e.target.value)} />
+                                    <input className='mobile-search-bar' type="text" placeholder="SEARCH" id="mobile-search" name="search" onChange={(e) => searchItems(e.target.value)} />
                                 </form>
                             </div>
                         </li>    
