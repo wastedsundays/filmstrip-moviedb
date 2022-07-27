@@ -15,12 +15,14 @@ const MobileSearchBar = (movie) => {
 
     function submitSearch(e){
         e.preventDefault();
+    
         if(searchInput === ''){
             return;
         }
         e.target.elements.search.value = '';
         navigate(`/search?q=${searchInput}`, { replace: true })
     }
+
 
     return(
         <div className='mobile-search-wrapper'>

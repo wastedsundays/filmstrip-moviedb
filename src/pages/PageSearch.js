@@ -32,7 +32,7 @@ function PageSearch(searchInput) {
                 setSearchError(searchErrorMessage);
             }else{
                 searchError !== false && setSearchError(false);
-                const first12Movies = data.results.splice(0,20);
+                const first12Movies = data.results.splice(0,12);
                 setSearchData(first12Movies);
             }
 

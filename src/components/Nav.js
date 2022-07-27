@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../images/filmstrip-logo-white2.png';
-// import MobileSearchBar from './MobileSearch';
+import MobileSearchBar from './MobileSearch';
 
 const Nav = ({ handleShowHideNav , handleLogoButton }) => {
     
@@ -16,6 +16,8 @@ const Nav = ({ handleShowHideNav , handleLogoButton }) => {
         handleLogoButton();
     }
 
+    
+
     return (
         <div className='header-wrapper'>
             <div className='header-wrapper-mobile'>
@@ -27,8 +29,9 @@ const Nav = ({ handleShowHideNav , handleLogoButton }) => {
                         <li><NavLink to='/about'>About</NavLink></li>
                         <li><NavLink to='/favourites'>Favourites</NavLink></li>
                         <li><NavLink to='/account'>My Trip</NavLink></li>
-                        {/* <li className='mobile-searchbar'><MobileSearchBar /></li> */}
                         </span>
+                        <li className='mobile-searchbar'><MobileSearchBar /></li>
+                        
                     </ul>
                 </nav>
             </div>
