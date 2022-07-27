@@ -15,7 +15,7 @@ const PageAccount = (onFavsPage) => {
     window.scrollTo(0, 0);
   }, [])
 
-    const favouriteItems = useSelector((state) => state.favs.items);
+    const favouriteItems = useSelector((state) => state.favs.items).slice().sort((a, b) => a.original_title.localeCompare(b.original_title));
 
     return(
         <section className='account-page'>
