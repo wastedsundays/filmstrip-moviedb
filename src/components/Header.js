@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
 import Nav from './Nav';
 // import { appTitle } from '../globals/globals';
 
@@ -29,21 +28,19 @@ const Header = () => {
     }, []);
 
     return (
-        <div className={navOpen ? 'show' : undefined}>
-            
-            {/* <h1><Link to="/">{appTitle}</Link></h1> */}
+        <div className={navOpen ? 'show' : undefined}>   
             {/**
              * HTML for the Hamburger icon modified from HTMl 
              * found at this codepen:
              * https://codepen.io/RRoberts/pen/ZBYaJr
              */}
-            <button className="btn-main-nav" 
+            <button className='btn-main-nav' 
                     onMouseDown={(e) => { e.preventDefault(); }}
                     onClick={showHideNav}>
-                <span className="hamburger-icon">
-                    <span className="line"></span>
-                    <span className="line"></span>
-                    <span className="line"></span>
+                <span className='hamburger-icon'>
+                    <span className='line'></span>
+                    <span className='line'></span>
+                    <span className='line'></span>
                 </span>
             </button>
             <Nav handleShowHideNav={showHideNav} handleLogoButton={hideNav} />
