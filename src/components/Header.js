@@ -10,6 +10,10 @@ const Header = () => {
     const showHideNav = () => {
         setNavOpen(!navOpen);
     }
+
+    const hideNav = () => {
+        setNavOpen(false);
+    }
    
     const isDesktop = (e) => {
         if(e.matches){
@@ -42,7 +46,7 @@ const Header = () => {
                     <span className="line"></span>
                 </span>
             </button>
-            <Nav handleShowHideNav={showHideNav} />
+            <Nav handleShowHideNav={showHideNav} handleLogoButton={hideNav} />
         </div>
     );
 
