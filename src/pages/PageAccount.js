@@ -1,8 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useEffect } from "react";
 import { appTitle } from '../globals/globals';
-// import NoFavs from '../components/NoFavs';
-import Footer from '../components/Footer';
+import NoTrip from '../components/NoTrip';
 
 const PageAccount = (onFavsPage) => {
 
@@ -17,11 +16,11 @@ const PageAccount = (onFavsPage) => {
         <section className='account-page'>
             <div className='section-title'>
                 <h1>My Films Trip</h1>
+                <h2>Your personal watch list.</h2>
                 <hr/>
                 <div className='my-trip-container'>
                 {favouriteItems.length === 0 ?
-                //  <NoFavs/> 
-                 <Footer />
+                 <NoTrip />
                  : favouriteItems.map(movie => 
                     <li key={movie.id}>{movie.title}</li>)}
             </div>
