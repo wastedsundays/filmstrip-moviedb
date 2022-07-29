@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { useEffect } from "react";
 import { appTitle } from '../globals/globals';
 import NoTrip from '../components/NoTrip';
@@ -22,7 +23,7 @@ const PageAccount = (onWatchPage) => {
                 {watchItems.length === 0 ?
                  <NoTrip />
                  : watchItems.map(movie => 
-                    <li key={movie.id}>{movie.title}</li>)}
+                    <li key={movie.id}><Link to={`/movie/${movie.id}`}>{movie.title}</Link></li>)}
             </div>
             </div>
         </section>
