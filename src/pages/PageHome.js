@@ -19,6 +19,13 @@ const [canLoadMore, setCanLoadMore] = useState(true);
 // Last loaded page
 const [moviePage, setMoviePage] = useState(1);
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // for smoothly scrolling
+  });
+};
+
 
 
 const fetchMovies = useCallback(async (page) => {
@@ -59,6 +66,7 @@ useEffect(() => {
           className="load-more"
         >
           Load More</button>}
+          <button onClick={scrollToTop}>Top</button>
          
        </section>
   )
