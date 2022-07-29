@@ -49,20 +49,6 @@ useEffect(() => {
   setCanLoadMore(true)
 }, [fetchMovies, selectedMovieFilter])
 
-        // useEffect(() => {
-
-          // console.log(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
-
-        // const fetchMovies = async () => {
-        //   const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${API_KEY}&language=en-US&page=1`);
-        //   const data = await res.json();
-        //   const first12Movies = data.results.splice(0,12);
-        //   setmoviesData(first12Movies);
-        // }
-        
-        // fetchMovies()
-        // }, [sort]);
-
 
         return (
         <section className='home-page'>

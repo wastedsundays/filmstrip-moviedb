@@ -15,6 +15,9 @@ function PageSearch(searchInput) {
     let query = searchParams.get('q');
         query = encodeURIComponent(query);
 
+
+        
+
     useEffect(() => {
 
         const fetchSearchMovies = async () => {
