@@ -29,7 +29,7 @@ const scrollToTop = () => {
 
 
 const fetchMovies = useCallback(async (page) => {
-  const res = await fetch(`https://api.themoviedb.org/3/movie/${selectedMovieFilter}?api_key=${API_KEY}&page=${page}`);
+  const res = await fetch(`https://api.themoviedb.org/3/movie/${selectedMovieFilter}?api_key=${API_KEY}&language=en-US&page=${page}`);
   const data = await res.json();
   const selectedMovies = data.results.splice(0,12);
   if (page === 1) {
