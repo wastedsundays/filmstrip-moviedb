@@ -1,17 +1,23 @@
 import noPoster from '../images/no-movie-poster.jpg';
-import { FaStar } from 'react-icons/fa';
-import { FaRegStar } from 'react-icons/fa';
+import { FaStar, FaRegStar, FaEye, FaRegEye } from 'react-icons/fa';
+// import { FaRegStar } from 'react-icons/fa';
 import { format } from 'date-fns';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, deleteItem } from '../features/favs/favsSlice';
+import { addWatchItem, deleteWatchItem } from '../features/watch/watchSlice';
 
 
-function SingleMovie({movie, onFavsPage}) {
+function SingleMovie({movie, onFavsPage, onWatchPage}) {
 
     const favouriteItems = useSelector((state) => state.favs.items);
+    const watchLater = useSelector((state) => state.watch.items);
     const dispatch = useDispatch();
 
     function inFav(id, arr){
+        return arr.some(item => item.id === id);
+    }
+
+    function inWatch(id, arr){
         return arr.some(item => item.id === id);
     }
 
@@ -67,10 +73,19 @@ function SingleMovie({movie, onFavsPage}) {
                     </div>
                     <div className='single-movie-rating-section'>
                         <p>{`Rating: ${movie.vote_average}`}</p>
-                        {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
-                            <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
-                            <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
-                        }
+                        <div className='single-movie-icons'>
+                            {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
+                                <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
+                                <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
+                            }
+
+                            {(onWatchPage === true || inWatch(movie.id, watchLater) === true ) ? 
+                                <div className='is-watch-icon' onClick={() => dispatch(deleteWatchItem(movie))}><FaEye color="red"/></div> : 
+                                <div className='add-watch-icon-container' onClick={() => dispatch(addWatchItem(movie))}><FaRegEye /></div>
+                            }
+                        </div>
+
+
                     </div>
                     <h3>Overview:</h3>
                     <p>{movie.overview}</p>
