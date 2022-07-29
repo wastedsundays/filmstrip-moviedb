@@ -1,4 +1,3 @@
-// import {NavLink} from 'react-router-dom';
 import { getYear } from '../globals/globals';
 
 const Footer = () => {

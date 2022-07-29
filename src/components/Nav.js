@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../images/filmstrip-logo-white2.png';
-// import MobileSearchBar from './MobileSearch';
 import {useNavigate} from 'react-router-dom';
 import {useState} from 'react';
 

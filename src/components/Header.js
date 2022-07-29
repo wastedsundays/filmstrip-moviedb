@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Nav from './Nav';
-// import { appTitle } from '../globals/globals';
 
 const Header = () => {
 
