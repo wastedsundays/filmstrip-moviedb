@@ -22,9 +22,10 @@
         border-radius: 5px;
         font-size: 1rem;
 
-        :hover {
-            border-color: red;
-            background-color: red;
-        }
+
+    }
+    button:hover {
+        border-color: red;
+        background-color: red;
     }
 }

@@ -70,10 +70,9 @@ useEffect(() => {
           {moviesData && <Movies moviesData={moviesData} />}
         {canLoadMore && <button 
           onClick={handleLoadMore}
-          className="btn load-more-btn"
+          className="load-more"
         >
-          Load more <span className="screen-reader-text">movies</span>
-        </button>}
+          Load More</button>}
          
        </section>
   )
