@@ -17,7 +17,7 @@ const PageAccount = (onWatchPage) => {
         <section className='account-page'>
             <div className='section-title'>
                 <h1>My Films Trip</h1>
-                <h2>Your personal watch list.</h2>
+                <h2>Personal watch list</h2>
                 <hr/>
                 <div className='my-trip-container'>
                 {watchItems.length === 0 ?
