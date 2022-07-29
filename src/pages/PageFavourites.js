@@ -8,7 +8,7 @@ import NoFaves from '../components/NoFaves';
 const PageFavourites = (onFavsPage) => {
 
   useEffect(() => {
-    document.title = `Favourites Page - ${appTitle}`;
+    document.title = `My Favourites - ${appTitle}`;
     window.scrollTo(0, 0);
   }, [])
 
