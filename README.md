@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Description
+
+This is a movie database web application that allows users to view information about movies. Users can also track their favourites, and keep a list of their own personal Films Trip (watched movies).
+
+Designed and developed by Adam H.
+
+This project uses the [TMDb API](https://themoviedb.org) but is not endorsed or certified by TMDb.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Pages
 
 In the project directory, you can run:
 
-### `npm start`
+### `Home Page`
 
-Runs the app in the development mode.\
+Displays 12 movies by default. The page allows users to "show more" by displaying an additional 12 movies each time. The default filter is "most popular." Users can change the filter to now playing, top rated, or upcoming.
+
+Each movie is displayed as a movie poster, framed by a border. Hover or click (mobile) opens the movie details, which displays the title, rating, and synopsis. There is a star icon to add the movie to userfavourites list, and a more info link to take the user to the individual movie details page.
+
+The search bar is present at the top of the page, under the navigation. On mobile, the search is in the mobile navigation drawer.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `About`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Description of the application and attribution. Links to social media channels. Random background image from movie backdrop.
 
-### `npm run build`
+### `Favourites`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Favourites page displays similarly to the home page. Grid of movie posters with click/hover function to reveal more info, and a link to individual movie page. Displays movies stored as "favourites" by user in local storage. If user has no favourites stored, a message with a random background image is displayed. Users may remove favourites on the page directly.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `My Trip`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Similar to the Favourites page, it displays movies stored by the user. This list is meant as a historical record of all films the user has viewed. Displayed as a bulleted (unbulleted on mobile) list in a wrapped flex arrangement. Each title links to the individual movie page. Users are not able to remove from trip list via this page (must go directly to single movie page)
 
-### `npm run eject`
+### `Search Page`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Displays the results of the search query, in the same layout as the home page. Grid of movie posters with hover/click functionality.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Individual Movie Page`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Shows a large poster, and more details about the movie (tagline, run time, release date, genres, rating, and synopsis).
+Under the details section are 6 cast photos of the most prominent cast members. Each photo has hover/click functionality with a link to the cast members' TMDb biography page.

@@ -1,5 +1,3 @@
-// Is Fav
-
 function isFavs(arr, path, id){
 
   // If we are on the watch later page...then no 
