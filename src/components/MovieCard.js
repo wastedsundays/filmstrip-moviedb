@@ -15,14 +15,6 @@ function MovieCard({ movie, onFavsPage }) {
       return arr.some(item => item.id === id);
   }
 
-
-  // const date = new Date(movie.release_date);
-  // const formattedDate = format(date, "MMMM d, yyyy");
-  // console.log(movie.release_date);
-  // const formattedYear = format(date, "yyyy");
-
-
-
   return (
     <div className="movie-card">
       <div className="movie-poster">

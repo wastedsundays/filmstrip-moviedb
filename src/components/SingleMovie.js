@@ -1,4 +1,3 @@
-// import placeholder from '../images/godzilla-vs-kong-demo-poster.jpg';
 import noPoster from '../images/no-movie-poster.jpg';
 import { FaStar } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
@@ -68,7 +67,6 @@ function SingleMovie({movie, onFavsPage}) {
                     </div>
                     <div className='single-movie-rating-section'>
                         <p>{`Rating: ${movie.vote_average}`}</p>
-                        {/* <p>{`Rating: ${formattedRating}`}</p> */}
                         {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
                             <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
                             <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
@@ -101,20 +99,7 @@ function SingleMovie({movie, onFavsPage}) {
                 </div>
 
                 )}
-
-                {/* <div className="screenshot">{movie.images.backdrops.slice(0,6).map(backdropList => 
-                <div className='movie-screen' key={backdropList.id}>
-                    <img src={`https://image.tmdb.org/t/p/original${backdropList.file_path}`} alt='movie screenshot'/>
-                </div>
-            
-
-                )}
-                </div> */}
-
-        </div>
-
-
-    
+        </div>    
     </>
   )
 }

@@ -9,9 +9,7 @@ const SearchBar = (movie) => {
     const navigate = useNavigate();
 
     const searchItems = (searchValue) => {
-        //searchValue = searchValue.replace(/ /g,'%')
         let uriEncodedSearchValue = encodeURIComponent(searchValue);
-        // console.log(uriEncodedSearchValue);
         setSearchInput(uriEncodedSearchValue);
     }
 
@@ -22,11 +20,9 @@ const SearchBar = (movie) => {
         }
         e.target.elements.search.value = '';
         navigate(`/search?q=${searchInput}`, { replace: true })
-        
     }
 
     return(
-        
             <div className='search-wrapper'>
                 <form action="#" autoComplete='off' onSubmit={submitSearch}>
                     <input className='search-bar' type="text" placeholder="Search for a movie ..." id="search" name="search" onChange={(e) => searchItems(e.target.value)} />
