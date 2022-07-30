@@ -1,5 +1,5 @@
 import noPoster from '../images/no-movie-poster.jpg';
-import { FaStar, FaRegStar, FaEye, FaRegEye } from 'react-icons/fa';
+import { FaStar, FaRegStar, FaEye, FaRegEye, FaYoutube } from 'react-icons/fa';
 import { format } from 'date-fns';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, deleteItem } from '../features/favs/favsSlice';
@@ -11,6 +11,7 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
     const favouriteItems = useSelector((state) => state.favs.items);
     const watchLater = useSelector((state) => state.watch.items);
     const dispatch = useDispatch();
+ 
 
     function inFav(id, arr){
         return arr.some(item => item.id === id);
@@ -19,6 +20,15 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
     function inWatch(id, arr){
         return arr.some(item => item.id === id);
     }
+
+    // function on() {
+    //     document.getElementById("overlay").style.display = "block";
+    //   }
+      
+    //   function off() {
+    //     document.getElementById("overlay").style.display = "none";
+    //   }
+
 
     //turn API runtime into mins and seconds
     let runTime = (movie.runtime);
@@ -38,6 +48,7 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
 
   return (
     <>  
+        <div id="overlay" ></div>
         <div className="single-movie-container">
             <div className="single-movie-backdrop"
                 style={{
@@ -60,16 +71,19 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
                 <div className="single-movie-info">
                     <h1>{movie.title}</h1>
                     <p>{movie.tagline}</p>
-                    <div className="single-movie-info-details">
-                        <p>{`${hours}h ${minutes}min`}</p>
-                        <p>{formattedDate}</p>
-                    </div>
-
+                    <div className='details-group'>
                     <div className="details-genres">
                         <ul className='genres-list'>
                             {movie.genres.map(genreList => <li key={genreList.id}>{genreList.name}</li>)}
                         </ul>
                     </div>
+                    <div className="single-movie-info-details">
+                        <p>{`${hours}h ${minutes}min`}</p>
+                        <p>{formattedDate}</p>
+                    </div>
+                    </div>
+
+
                     <div className='single-movie-rating-section'>
                         <p>{`Rating: ${movie.vote_average}`}</p>
                         <div className='single-movie-icons'>
@@ -82,6 +96,10 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
                                 <div className='is-watch-icon' onClick={() => dispatch(deleteWatchItem(movie))}><FaEye color="red" title="You have watched this"/></div> : 
                                 <div className='add-watch-icon-container' onClick={() => dispatch(addWatchItem(movie))}><FaRegEye title="Add to your Trip"/></div>
                             }
+
+                            <FaYoutube title="Watch Trailer On Youtube" />
+
+
                         </div>
 
 
