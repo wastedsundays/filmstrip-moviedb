@@ -5,13 +5,11 @@ import { FaTiktok, FaTwitter, FaFacebook, FaInstagram, FaYoutubeSquare } from 'r
 import { IconContext } from 'react-icons/lib';
 import { NavLink } from 'react-router-dom';
 import { API_KEY } from '../globals/globals';
+import { movieArray } from '../globals/globals';
 
 
 const PageAbout = (movie) => {
 
-      // On mount: 
-  //    Set document title
-  //    Scroll back to the top
   useEffect(() => {
     document.title = `About - ${appTitle}`;
     window.scrollTo(0, 0);
@@ -21,20 +19,38 @@ const PageAbout = (movie) => {
 
   const backdropUrl = "https://image.tmdb.org/t/p/w1280"
 
-  useEffect(() => {
+  
+// Use this if you want to have a random now playing backdrop.
+//   useEffect(() => {
 
-      const fetchMovieBackdrops = async () => {
-              const res = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
-              const data = await res.json();
-              const randomBackdrop = data.results[Math.floor(Math.random()*data.results.length)].backdrop_path
-              setMovieBackdrop(backdropUrl+randomBackdrop);
+//       const fetchMovieBackdrops = async () => {
+//               const res = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
+//               const data = await res.json();
+//               const randomBackdrop = data.results[Math.floor(Math.random()*data.results.length)].backdrop_path
+//               setMovieBackdrop(backdropUrl+randomBackdrop);
 
-      }
-      fetchMovieBackdrops()
+//       }
+//       fetchMovieBackdrops()
 
-  }, []);
+//   }, []);
 
 
+// Use this for a random backdrop of my favourite movies
+useEffect(() => {
+
+    const fetchMovieBackdrops = async () => {
+        const randMovie = movieArray[Math.floor(Math.random()*movieArray.length)]    
+        const res = await fetch(`https://api.themoviedb.org/3/movie/${randMovie}/images?api_key=${API_KEY}`);
+        const data = await res.json();
+            
+        const random = data.backdrops.filter(element => (element.iso_639_1 === null));
+        const randomBackdrop = random[Math.floor(Math.random()*random.length)].file_path;
+ 
+        setMovieBackdrop(backdropUrl+randomBackdrop);
+    }
+    fetchMovieBackdrops()
+
+}, []);
 
 
     return(
