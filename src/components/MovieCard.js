@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import noPoster from '../images/no-movie-poster.jpg';
 import { FaStar, FaRegStar, FaEye, FaRegEye } from 'react-icons/fa';
-// import { FaRegStar } from 'react-icons/fa';
-import { useSelector, useDispatch } from 'react-redux';
 import { addItem, deleteItem } from '../features/favs/favsSlice';
 import { addWatchItem, deleteWatchItem } from '../features/watch/watchSlice';
 

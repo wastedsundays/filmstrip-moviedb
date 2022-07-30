@@ -1,12 +1,16 @@
+
 import noPoster from '../images/no-movie-poster.jpg';
 import { FaStar, FaRegStar, FaEye, FaRegEye, FaYoutube } from 'react-icons/fa';
 import { format } from 'date-fns';
+import {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, deleteItem } from '../features/favs/favsSlice';
 import { addWatchItem, deleteWatchItem } from '../features/watch/watchSlice';
 
 
 function SingleMovie({movie, onFavsPage, onWatchPage}) {
+
+    const [trailerKey, setTrailerKey] = useState(false);
 
     const favouriteItems = useSelector((state) => state.favs.items);
     const watchLater = useSelector((state) => state.watch.items);
@@ -20,6 +24,17 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
     function inWatch(id, arr){
         return arr.some(item => item.id === id);
     }
+
+    useEffect(() => {
+        const youTubeTrailer = movie.videos.results.find(element => (element.iso_3166_1 === 'US' && element.type === 'Trailer' && element.site === 'YouTube'));
+   
+
+        if(youTubeTrailer === undefined){
+            setTrailerKey("none")
+        }else{
+            setTrailerKey(youTubeTrailer.key);
+        }
+    }, []);
 
     // function on() {
     //     document.getElementById("overlay").style.display = "block";
@@ -96,9 +111,10 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
                                 <div className='is-watch-icon' onClick={() => dispatch(deleteWatchItem(movie))}><FaEye color="red" title="You have watched this"/></div> : 
                                 <div className='add-watch-icon-container' onClick={() => dispatch(addWatchItem(movie))}><FaRegEye title="Add to your Trip"/></div>
                             }
-
-                            <FaYoutube title="Watch Trailer On Youtube" />
-
+                            { (trailerKey === 'none') ? '' :
+                            <FaYoutube title="Watch Trailer On Youtube" onClick={()=> window.open(`https://www.youtube.com/watch?v=${trailerKey}`, "_blank")}/>
+                        
+                        }
 
                         </div>
 
