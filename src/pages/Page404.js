@@ -4,9 +4,6 @@ import { API_KEY } from '../globals/globals';
 
 function Page404() {
 
-        // On mount: 
-  //    Set document title
-  //    Scroll back to the top
   useEffect(() => {
     document.title = `404 - ${appTitle}`;
     window.scrollTo(0, 0);
@@ -21,15 +18,10 @@ function Page404() {
       const fetchMovieBackdrops = async () => {
               const res = await fetch(`https://api.themoviedb.org/3/movie/9340/images?api_key=${API_KEY}`);
               const data = await res.json();
-              // const randomBackdrop = data.results[Math.floor(Math.random()*data.results.length)].backdrop_path
-              // const randomBackdrop = data.backdrops[Math.floor(Math.random()*data.backdrops.length)].file_path;
               const random = data.backdrops.filter(element => (element.iso_639_1 === null));
               const randomBackdrop = random[Math.floor(Math.random()*random.length)].file_path;
- 
-  
+   
               setMovieBackdrop(backdropUrl+randomBackdrop);
-
-
       }
       fetchMovieBackdrops()
 
@@ -42,7 +34,7 @@ function Page404() {
             <div className='about-details'>
                 <article>
                   <h1>404.</h1>
-                  <p><q>Chester Copperpot! Don’t you guys see? Don’t you realize? He was a pro. He never made it this far. Look how far we’ve come. We’ve got a chance.</q> - Mikey Walsh. (The Goonies)</p>
+                  <p><q>Chester Copperpot! Don't you guys see? Don't you realize? He was a pro. He never made it this far. Look how far we've come. We've got a chance.</q> - Mikey Walsh. (The Goonies)</p>
                 </article>
 
 
