@@ -1,6 +1,5 @@
 import noPoster from '../images/no-movie-poster.jpg';
 import { FaStar, FaRegStar, FaEye, FaRegEye } from 'react-icons/fa';
-// import { FaRegStar } from 'react-icons/fa';
 import { format } from 'date-fns';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, deleteItem } from '../features/favs/favsSlice';
@@ -75,13 +74,13 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
                         <p>{`Rating: ${movie.vote_average}`}</p>
                         <div className='single-movie-icons'>
                             {(onFavsPage === true || inFav(movie.id, favouriteItems) === true ) ? 
-                                <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red"/></div> : 
-                                <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar /></div>
+                                <div className='is-favs-icon' onClick={() => dispatch(deleteItem(movie))}><FaStar color="red" title="In Your Favourites List"/></div> : 
+                                <div className='add-fav-icon-container' onClick={() => dispatch(addItem(movie))}><FaRegStar title="Add to Your Favourites List"/></div>
                             }
 
                             {(onWatchPage === true || inWatch(movie.id, watchLater) === true ) ? 
-                                <div className='is-watch-icon' onClick={() => dispatch(deleteWatchItem(movie))}><FaEye color="red"/></div> : 
-                                <div className='add-watch-icon-container' onClick={() => dispatch(addWatchItem(movie))}><FaRegEye /></div>
+                                <div className='is-watch-icon' onClick={() => dispatch(deleteWatchItem(movie))}><FaEye color="red" title="You have watched this"/></div> : 
+                                <div className='add-watch-icon-container' onClick={() => dispatch(addWatchItem(movie))}><FaRegEye title="Add to your Trip"/></div>
                             }
                         </div>
 
