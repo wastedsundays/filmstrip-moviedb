@@ -66,9 +66,9 @@ const PageAbout = (movie) => {
                     </article>
                     <article>
                         <h2>Credits</h2>
-                        <p>FilmsTrip was created, designed, and built by Adam H.</p>
+                        <p>FilmsTrip was created, designed, and built by <a href="https://adamh.ca" target="_blank" rel="noreferrer">Adam H.</a></p>
                         <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
-                        <img className='movie-db-logo' src={moviedbLogo} alt="The Movie DB" />
+                        <a href="https://themoviedb.org" target="_blank" rel="noreferrer"><img className='movie-db-logo' src={moviedbLogo} alt="The Movie DB" /></a>
                     </article>
                 </div>
                 <div className='about-bg' 
