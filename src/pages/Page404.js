@@ -41,7 +41,8 @@ function Page404() {
 
             <div className='about-details'>
                 <article>
-                    <p>These aren't the pages you're looking for....</p> 
+                  <h1>404.</h1>
+                  <p><q>Chester Copperpot! Don’t you guys see? Don’t you realize? He was a pro. He never made it this far. Look how far we’ve come. We’ve got a chance.</q> - Mikey Walsh. (The Goonies)</p>
                 </article>
 
 
