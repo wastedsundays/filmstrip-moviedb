@@ -18,8 +18,13 @@ header {
   background-image: url('../images/film-bar.jpg');
   background-position: top left;
   background-repeat: no-repeat;
+
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 3px 3px 0px;
+
   .logo {
-      height: 79px;
+      height: 75px;
+      position: relative;
+      top: 2px;
   }
 }
 

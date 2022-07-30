@@ -21,11 +21,13 @@
         color: white;
         border-radius: 5px;
         font-size: 1rem;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
 
     }
     button:hover {
         border-color: red;
         background-color: red;
+        
     }
 }
