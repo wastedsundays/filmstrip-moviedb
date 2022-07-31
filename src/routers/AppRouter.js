@@ -16,7 +16,7 @@ import SearchBar from '../components/Search';
 function App() {
 
     return (
-      <BrowserRouter>
+      <BrowserRouter basename='filmstrip'>
         <header>
           <Header />
           <SearchBar />
