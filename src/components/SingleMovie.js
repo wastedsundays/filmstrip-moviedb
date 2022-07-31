@@ -30,7 +30,7 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
    
 
         if(youTubeTrailer === undefined){
-            setTrailerKey("none")
+            setTrailerKey(null)
         }else{
             setTrailerKey(youTubeTrailer.key);
         }
@@ -111,7 +111,7 @@ function SingleMovie({movie, onFavsPage, onWatchPage}) {
                                 <div className='is-watch-icon' onClick={() => dispatch(deleteWatchItem(movie))}><FaEye color="red" title="You have watched this"/></div> : 
                                 <div className='add-watch-icon-container' onClick={() => dispatch(addWatchItem(movie))}><FaRegEye title="Add to your Trip"/></div>
                             }
-                            { (trailerKey === 'none') ? '' :
+                            { (trailerKey === null ) ? null :
                             <FaYoutube title="Watch Trailer On Youtube" onClick={()=> window.open(`https://www.youtube.com/watch?v=${trailerKey}`, "_blank")}/>
                         
                         }
