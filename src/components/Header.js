@@ -28,20 +28,17 @@ const Header = () => {
 
     return (
         <div className={navOpen ? 'show' : undefined}>   
-            {/**
-             * HTML for the Hamburger icon modified from HTMl 
-             * found at this codepen:
-             * https://codepen.io/RRoberts/pen/ZBYaJr
-             */}
-            <button className='btn-main-nav' 
-                    onMouseDown={(e) => { e.preventDefault(); }}
-                    onClick={showHideNav}>
-                <span className='hamburger-icon'>
-                    <span className='line'></span>
-                    <span className='line'></span>
-                    <span className='line'></span>
-                </span>
-            </button>
+            <div id="nav-container"
+                onMouseDown={(e) => { e.preventDefault(); }}
+                onClick={showHideNav}>
+                <div className="toggle-icon">
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </div>
+            </div>
+
+
             <Nav handleShowHideNav={showHideNav} handleLogoButton={hideNav} />
         </div>
     );

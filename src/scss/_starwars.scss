@@ -1,0 +1,91 @@
+@use 'variables';
+
+#nav-container{
+    position: fixed;
+    top: 52px;
+    right: 11px;
+    // margin:-3em;
+    z-index: 908;
+  }
+  
+  /*toggle-icon*/
+  .toggle-icon {
+    display: block;
+    position: absolute;
+    right: 44px;
+    width: 100%;
+    margin: -2.2em auto 0 0.2em;
+    -webkit-transition: margin 600ms;
+    -moz-transition: margin 600ms;
+    transition: margin 600ms;
+    cursor: pointer;
+  }
+  
+  .toggle-icon .bar {
+    display: block;
+    width: 0.8em;
+    height: 0.2em;
+    margin: 0.6em 0em;
+    border-right: 2em solid variables.$black-color;
+    border-left: 0.6em solid #666;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+    -moz-transition-property: -moz-transform, margin, border-right-color, box-shadow;
+    transition-property: transform, margin, border-right-color, box-shadow;
+    -webkit-transition-duration: 600ms;
+    -moz-transition-duration: 600ms;
+    transition-duration: 600ms;
+  }
+    .toggle-icon .bar:nth-of-type(1) {
+      -webkit-transition: opacity 300ms;
+      -moz-transition: opacity 300ms;
+      transition: opacity 300ms;
+    }
+    .toggle-icon .bar:nth-of-type(2) {
+      -webkit-transform: rotate(-180deg);
+      -moz-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+    }
+  
+  /*pushed*/
+  .show .toggle-icon {
+    margin: -3.2em 0 0 0.7em;
+  }
+  
+    .show .bar:nth-of-type(1) {
+      opacity: 0;
+    }
+  
+    .show .bar:nth-of-type(2) {
+        opacity: 1;
+      margin-left: 1.4em;
+      -webkit-transform: rotate(-137deg) translateY(-1.5em);
+      -moz-transform: rotate(-137deg) translateY(-1.5em);
+      -ms-transform: rotate(-137deg) translateY(-1.5em);
+      -o-transform: rotate(-137deg) translateY(-1.5em);
+      transform: rotate(-137deg) translateY(-1.5em);
+    }
+
+    .show .bar:nth-of-type(3) {
+        
+        margin-left: 2px;
+        margin-top: 14px;
+        -webkit-transform: rotate(-42deg);
+        -moz-transform: rotate(-42deg);
+        -ms-transform: rotate(-42deg);
+        -o-transform: rotate(-42deg);
+        transform: rotate(-42deg);
+      }
+
+      .show .toggle-icon .bar:nth-of-type(2) {
+        border-right-color: rgba(205,40,44,1);
+        box-shadow: 0.4em 0 0.6em 0.1em rgba(205,40,44,0.75);
+      }
+      .show .toggle-icon .bar:nth-of-type(3) {
+        border-right-color: rgba(83,228,68,1);
+        box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65);
+      }
