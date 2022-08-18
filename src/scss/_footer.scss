@@ -1,16 +1,32 @@
 .footer {
     height: 50px;
-    display: flex;
     margin: 0 auto;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-image: url('../images/film-bar.jpg');
     background-position: center top;
     padding-left: 0;
 
+    @media screen and (min-width: 600px) {
+        justify-content: space-between;
+        
+    }
+
     li {
         list-style: none;
         padding: 0 20px;
+        margin-top: 10px;
+
+    }
+
+    .attribution-footer, .tagline-footer {
+        display: none;
+
+        @media screen and (min-width: 600px) {
+            display: block;
+            
+        }
 
     }
 }
