@@ -1,9 +1,6 @@
-import { useSelector } from 'react-redux';
 import MovieCard from './MovieCard';
 
 function SearchGrid({searchData}){
-
-    const favs = useSelector((state) => state.favs.items);
 
     return (
         <div className='movies-container'>
